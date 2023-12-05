@@ -1,0 +1,111 @@
+body {
+  margin: auto;
+  width: auto;
+  height: 900px;
+  background: linear-gradient(to bottom right, purple 25%, blue);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner {
+  width: auto;
+  height: 50px;
+  background: linear-gradient(to bottom right, purple 25%, blue);
+  color: violet;
+}
+h1 {
+  text-align: center;
+}
+/* Navigation links */
+.nav {
+  float: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px;
+  color: violet;
+  text-decoration: none;
+  font-size: 17px;
+  /*width: 25%; /* (applys to display: block) 25% for Four equal-width links. If you have Two links, use 50%, and 33.33% for Three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+}
+/* Add responsiveness - on screens less than 500px, 
+make the navigation links appear on top of each other, 
+instead of next to each other */
+@media screen and (max-width: 500px) {
+  .nav {
+    float: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left; /* If you want the text to be left-aligned 
+      on small screens */
+  }
+}
+.nav a:hover {
+  color: white;
+  text-align: center;
+}
+
+.dropbtn {
+  background-color: inherit;
+  color: violet;
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  text-align: center;
+}
+.dropbtn:hover {
+  color: white;
+  text-align: center;
+}
+.dropdown {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-align: center;
+}
+.dropdown-content a {
+  color: violet;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+}
+.dropdown:hover .dropdown-content {
+  float: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+/* Add responsiveness - on screens less than 500px, 
+make the navigation links appear on top of each other, 
+instead of next to each other */
+@media screen and (max-width: 500px) {
+  .dropdown:hover .dropdown-content {
+    float: none;
+    display: inline-block;
+    text-align: center;
+    color: white;
+  }
+}
+
+img {
+  max-width: 300px;
+  height: 300px;
+  display: block;
+  margin: 40px auto 5px auto;
+  border-radius: 8px;
+}
+
+p {
+  float: left;
+  padding: 10px;
+  color: violet;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center;
+}
