@@ -1,22 +1,28 @@
 body {
   margin: auto;
   width: auto;
-  height: 900px;
+  height: 760px;
+  max-height: auto;
   background: linear-gradient(to bottom right, purple 25%, blue);
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 500px) {
+  body {
+    height: auto;
+  }
+}
+.header {
+  position: relative;
+  top: 0;
+}
 .banner {
-  width: auto;
   height: 50px;
   background: linear-gradient(to bottom right, purple 25%, blue);
   color: violet;
 }
-h1 {
-  text-align: center;
-}
 /* Navigation links */
-.nav {
+.top_nav {
   float: none;
   display: flex;
   flex-direction: row;
@@ -25,23 +31,17 @@ h1 {
   color: violet;
   text-decoration: none;
   font-size: 17px;
-  /*width: 25%; /* (applys to display: block) 25% for Four equal-width links. If you have Two links, use 50%, and 33.33% for Three links, etc.. */
   text-align: center; /* If you want the text to be centered */
 }
 /* Add responsiveness - on screens less than 500px, 
 make the navigation links appear on top of each other, 
 instead of next to each other */
 @media screen and (max-width: 500px) {
-  .nav {
-    float: none;
-    display: flex;
+  .top_nav {
     flex-direction: column;
-    justify-content: space-evenly;
-    text-align: left; /* If you want the text to be left-aligned 
-      on small screens */
   }
 }
-.nav a:hover {
+.top_nav a:hover {
   color: white;
   text-align: center;
 }
@@ -56,11 +56,10 @@ instead of next to each other */
 }
 .dropbtn:hover {
   color: white;
-  text-align: center;
 }
 .dropdown {
-  position: relative;
   display: block;
+  position: relative;
   text-align: center;
 }
 .dropdown-content {
@@ -72,13 +71,14 @@ instead of next to each other */
   color: violet;
   text-decoration: none;
   text-align: center;
-  width: 100%;
+  margin: 0px;
+  width: auto;
 }
 .dropdown:hover .dropdown-content {
   float: none;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   color: white;
 }
 /* Add responsiveness - on screens less than 500px, 
@@ -87,25 +87,84 @@ instead of next to each other */
 @media screen and (max-width: 500px) {
   .dropdown:hover .dropdown-content {
     float: none;
-    display: inline-block;
+    display: block;
     text-align: center;
+    width: 100%;
     color: white;
   }
 }
-
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  color: violet;
+  margin: 0px;
+  padding: 0px;
+}
 img {
   max-width: 300px;
-  height: 300px;
+  max-height: 300px;
   display: block;
-  margin: 40px auto 5px auto;
+  margin: 15px auto 15px auto;
   border-radius: 8px;
 }
-
-p {
-  float: left;
-  padding: 10px;
+@media screen and (max-width: 500px) {
+  img {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin: 15px auto 15px auto;
+    border-radius: 8px;
+  }
+}
+h6 {
+  margin: 0px;
+  padding: 10px 40px 40px 40px;
   color: violet;
   text-decoration: none;
   font-size: 17px;
   text-align: center;
+}
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+@media screen and (max-width: 500px) {
+  .footer {
+    position: relative;
+  }
+}
+.bottom_nav {
+  float: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: violet;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center; /* If you want the text to be centered */
+}
+/* Add responsiveness - on screens less than 500px, 
+make the navigation links appear on top of each other, 
+instead of next to each other */
+@media screen and (max-width: 500px) {
+  .top_nav {
+    flex-direction: column;
+  }
+}
+.bottom_nav a {
+  text-align: center;
+  text-decoration: none;
+  color: violet;
+}
+.bottom_nav a:hover {
+  text-align: center;
+  text-decoration: none;
+  color: white;
 }
