@@ -1,15 +1,18 @@
 # Portfolio
 
-Author: **Gianni M. Javier (Lucid Developer)**
+Author: **Gianni M. Javier**
+Alias: **LucidDeveloper**
 
-Date of Origin: **12/04/2023**
+Origin: **12/04/2023**
+Update: **12/07/2023**
 
 ## Technology
 
-**Front End Tools:** HTML, CSS, JavaSCript
+**Front End Languages:** HTML, CSS
 
-**Back End Tools:** Python, Flask
+**Back End Languages:** Python
+**Back End Tools:** Flask
 
 ## Summary
 
-Portfolio contains a brief preview of my full stak web development skills, and my dsa problem solving skills.
+Portfolio contains a preview of my full stack web development skills.
