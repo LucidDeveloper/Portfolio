@@ -1,34 +1,11 @@
-body {
-  margin: auto;
-  width: auto;
-  height: 940px;
-  max-height: auto;
-  background: linear-gradient(to bottom right, purple 25%, blue);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-@media screen and (max-width: 500px) {
-  .body {
-    height: auto;
-  }
-}
-.header {
-  position: relative;
-  top: 0;
-}
-.banner {
-  height: 50px;
-  background: linear-gradient(to bottom right, purple 25%, blue);
-  color: violet;
-}
 /* Navigation links */
 .top_nav {
   float: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  padding: 10px;
-  color: violet;
+  justify-content: center;
+  padding: auto;
+  color: ghostwhite;
   text-decoration: none;
   font-size: 17px;
   text-align: center; /* If you want the text to be centered */
@@ -42,44 +19,46 @@ instead of next to each other */
   }
 }
 .top_nav a:hover {
-  color: white;
-  text-align: center;
+  color: magenta;
 }
-
 .dropbtn {
   background-color: inherit;
-  color: violet;
-  padding: 10px;
+  color: ghostwhite;
+  padding: auto;
   font-size: 17px;
   border: none;
   text-align: center;
 }
-.dropbtn:hover {
-  color: white;
+.top_nav .dropbtn h1:hover {
+  color:magenta;
 }
 .dropdown {
-  display: block;
+  float: none;
+  display: flexbox;
+  justify-content: center;
   position: relative;
   text-align: center;
 }
 .dropdown-content {
   display: none;
-  position: absolute;
+  padding-top: 5px;
+  position:relative;
   text-align: center;
 }
 .dropdown-content a {
-  color: violet;
+  color: ghostwhite;
   text-decoration: none;
   text-align: center;
-  margin: 0px;
+  margin: auto;
+  padding: 5px;
   width: auto;
 }
 .dropdown:hover .dropdown-content {
   float: none;
-  display: flex;
+  display: flex; 
   flex-direction: column;
-  align-items: center;
-  color: white;
+  justify-content: space-between;
+  align-items: normal;
 }
 /* Add responsiveness - on screens less than 500px, 
 make the navigation links appear on top of each other, 
@@ -88,9 +67,23 @@ instead of next to each other */
   .dropdown:hover .dropdown-content {
     float: none;
     display: block;
-    text-align: center;
+    align-items: center;
     width: 100%;
-    color: white;
+  }
+}
+
+body {
+  margin: auto;
+  width: auto;
+  height: 940px;
+  max-height: auto;
+  background: linear-gradient(to bottom, crimson , dodgerblue 25% );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 500px) {
+  body {
+    height: auto;
   }
 }
 h1,
@@ -98,11 +91,11 @@ h2,
 h3,
 h4 {
   text-align: center;
-  color: violet;
+  color: ghostwhite;
   margin: 0px;
   padding: 0px;
 }
-img {
+.img img {
   max-width: 300px;
   max-height: 300px;
   display: block;
@@ -110,7 +103,7 @@ img {
   border-radius: 8px;
 }
 @media screen and (max-width: 500px) {
-  img {
+  .img img {
     max-width: 200px;
     max-height: 200px;
     display: block;
@@ -118,47 +111,49 @@ img {
     border-radius: 8px;
   }
 }
+.about_me {
+  max-width: 600px;
+  display: block;
+  margin: 15px auto 15px auto;
+  border-radius: 8px;
+}
+@media screen and (max-width: 500px) {
+  .about_me {
+    max-width: 400px;
+    display: block;
+    margin: 15px auto 15px auto;
+    border-radius: 8px;
+  }
+}
 h6 {
   margin: 0px;
-  padding: 10px 40px 40px 40px;
-  color: violet;
+  padding: 5px 20px 5px 20px;
+  color: ghostwhite;
   text-decoration: none;
   font-size: 17px;
   text-align: center;
 }
-.footer {
+
+
+.bottom_nav {
   position: fixed;
   width: 100%;
   bottom: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-@media screen and (max-width: 500px) {
-}
-.bottom_nav {
   float: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  color: violet;
-  text-decoration: none;
   font-size: 17px;
-  text-align: center; /* If you want the text to be centered */
-}
-/* Add responsiveness - on screens less than 500px, 
-make the navigation links appear on top of each other, 
-instead of next to each other */
-@media screen and (max-width: 500px) {
+  text-align: center;
 }
 .bottom_nav a {
   text-align: center;
   text-decoration: none;
-  color: violet;
+  color: ghostwhite;
 }
 .bottom_nav a:hover {
   text-align: center;
   text-decoration: none;
-  color: white;
+  color: magenta;
 }
