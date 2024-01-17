@@ -12,7 +12,7 @@
 
     <div class="top_nav">
       <div id="home" class="dropdown">
-        <div class="dropbtn"><h1>LucidDeveloper</h1></div>
+        <div class="dropbtn"><a href='/'><h1>LucidDeveloper</h1></a></div>
         <div class="dropdown-content">
           <a href="/resume">Resume</a>
           <a href="/projects">Projects</a>
@@ -27,23 +27,16 @@
         src="{{ url_for('static', filename = 'photos/home.jpg') }}" alt="home.jpg" />
       </div>
       <div class="about_me">
-        <h3>Gianni M. Javier</h3>
-        <h4>Software Development Engineer</h4>
-        <h6>
-          Thank you for visiting my website. My name is Gianni M. Javier, aka
-          Lucid Developer. I enjoy developing web and mobile apps in my spare
-          time, as well as solving data structure and algorithm challenges. If you
-          decide to explore this website, you will come to see some of my past
-          projects, as well as my thoughts and solutions on various challenges
-          found online.
-        </h6>
+        <h2>Gianni M. Javier</h2>
+        <h3>Software Development Engineer</h3>
+        <h4>Thank you for visiting!</h4>
       </div>
     </div>
 
       <div class="bottom_nav">
-        <a href="/linked_in">LinkedIn</a>
-        <a href="/git_hub">GitHub</a>
-        <a href="/email">Email</a>
+        <a href="/linked_in" target="_blank">LinkedIn</a>
+        <a href="/git_hub" target="_blank">GitHub</a>
+        <a href="/email" target="_blank">Email</a>
       </div>
       
   </body>

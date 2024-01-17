@@ -19,7 +19,7 @@ instead of next to each other */
   }
 }
 .top_nav a:hover {
-  color: magenta;
+  color: ghostwhite;
 }
 .dropbtn {
   background-color: inherit;
@@ -30,7 +30,7 @@ instead of next to each other */
   text-align: center;
 }
 .top_nav .dropbtn h1:hover {
-  color:magenta;
+  color:ghostwhite;
 }
 .dropdown {
   float: none;
@@ -46,10 +46,11 @@ instead of next to each other */
   text-align: center;
 }
 .dropdown-content a {
-  color: ghostwhite;
   text-decoration: none;
   text-align: center;
-  margin: auto;
+  background: linear-gradient(to bottom, ghostwhite, dodgerblue );
+  background-clip: text;
+  color: transparent;
   padding: 5px;
   width: auto;
 }
@@ -76,8 +77,8 @@ body {
   margin: auto;
   width: auto;
   height: 940px;
-  max-height: auto;
-  background: linear-gradient(to bottom, crimson , dodgerblue 25% );
+  max-height: auto;;
+  background: radial-gradient(circle, crimson , dodgerblue );
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -86,14 +87,24 @@ body {
     height: auto;
   }
 }
+a,
 h1,
 h2,
-h3,
+h3 {
+  text-align: center;
+  text-decoration: none;
+  margin: 0px;
+  background: linear-gradient(to bottom, ghostwhite, dodgerblue );
+  background-clip: text;
+  color: transparent;
+}
 h4 {
   text-align: center;
   color: ghostwhite;
-  margin: 0px;
-  padding: 0px;
+  margin-top: 80px;
+  background: linear-gradient(to bottom, ghostwhite, dodgerblue );
+  background-clip: text;
+  color: transparent;
 }
 .img img {
   max-width: 300px;
@@ -125,16 +136,6 @@ h4 {
     border-radius: 8px;
   }
 }
-h6 {
-  margin: 0px;
-  padding: 5px 20px 5px 20px;
-  color: ghostwhite;
-  text-decoration: none;
-  font-size: 17px;
-  text-align: center;
-}
-
-
 .bottom_nav {
   position: fixed;
   width: 100%;
@@ -150,10 +151,12 @@ h6 {
 .bottom_nav a {
   text-align: center;
   text-decoration: none;
-  color: ghostwhite;
+  background: linear-gradient(to bottom, ghostwhite, dodgerblue );
+  background-clip: text;
+  color: transparent;
 }
 .bottom_nav a:hover {
   text-align: center;
   text-decoration: none;
-  color: magenta;
+  color: ghostwhite;
 }

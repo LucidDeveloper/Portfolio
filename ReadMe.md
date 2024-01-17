@@ -1,22 +1,24 @@
 # Portfolio
 
-Author: **Gianni M. Javier**
-Alias: **LucidDeveloper**
+**Author**
+Gianni M. Javier
 
-Origin: **12/04/2023**
-Update: **12/08/2023**
+**Origin**
+12/04/2023
+
+**Last Updated**
+01/17/2024
 
 ## Summary
 
-Full Stack Web App developed to display Portfolio of College, Business, and Personal Projects.
-
-Html and Css are used for the client side of the application.
-Python, together with the Flask framework, are used for the server side of the application.
+Full Stack Web App developed to display Personal Portfolio.
 
 ## Technology
+**Front End Tools**
+Html/Css
 
-**Front End Languages:** Html, Css
-**Front End Tools:**
+**Back End Tools**
+Python
 
-**Back End Languages:** Python
-**Back End Tools:** Flask
+**Framework**
+Flask

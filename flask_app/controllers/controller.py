@@ -1,14 +1,15 @@
 # Controllers act as servers for each distinct model and respective templates within the app
-from flask_app.__init__ import app
+from flask_app import app
 from flask import redirect, render_template
 
 @app.route('/')
 def root():
-    return redirect('/home')
+    return render_template('index.html')
+    
 
 @app.route('/home')
 def home():
-    return render_template('home.html')
+    return redirect('/')
 
 @app.route('/resume')
 def resume():
@@ -20,12 +21,12 @@ def projects():
 
 @app.route('/linked_in')
 def linked_in():
-    return redirect('linkedin.com')
+    return redirect('https://www.linkedin.com/in/lucid-developer/')
 
 @app.route('/git_hub')
 def git_hub():
-    return redirect('github.com')
+    return redirect('https://www.github.com/LucidDeveloper/')
 
 @app.route('/email')
 def email():
-    return redirect()
+    return redirect('mailto:lucid_developer@proton.me')
