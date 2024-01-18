@@ -5,11 +5,6 @@ from flask import redirect, render_template
 @app.route('/')
 def root():
     return render_template('index.html')
-    
-
-@app.route('/home')
-def home():
-    return redirect('/')
 
 @app.route('/resume')
 def resume():
@@ -18,6 +13,10 @@ def resume():
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
+
+@app.route('/home')
+def home():
+    return redirect('/')
 
 @app.route('/linked_in')
 def linked_in():

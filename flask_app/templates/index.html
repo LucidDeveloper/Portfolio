@@ -16,7 +16,6 @@
         <div class="dropdown-content">
           <a href="/resume">Resume</a>
           <a href="/projects">Projects</a>
-          <a href="/home">Home</a>
         </div>
       </div>
     </div>
@@ -24,7 +23,7 @@
     <div class="main">
       <div class="img">
       <img
-        src="{{ url_for('static', filename = 'photos/home.jpg') }}" alt="home.jpg" />
+        src="{{ url_for('static', filename = 'images/home.jpg') }}" alt="home.jpg" />
       </div>
       <div class="about_me">
         <h2>Gianni M. Javier</h2>
@@ -33,10 +32,10 @@
       </div>
     </div>
 
-      <div class="bottom_nav">
-        <a href="/linked_in" target="_blank">LinkedIn</a>
-        <a href="/git_hub" target="_blank">GitHub</a>
-        <a href="/email" target="_blank">Email</a>
+      <div class="bottom_nav" id="bottom_nav">
+        <h5><a href="/linked_in" target="_blank">LinkedIn</a></h5>
+        <h5><a href="/git_hub" target="_blank">GitHub</a></h5>
+        <h5><a href="/email">Email</a></h5>
       </div>
       
   </body>

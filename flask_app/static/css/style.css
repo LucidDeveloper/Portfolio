@@ -1,6 +1,6 @@
 /* Navigation links */
 .top_nav {
-  float: none;
+  float:none;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -28,9 +28,11 @@ instead of next to each other */
   font-size: 17px;
   border: none;
   text-align: center;
+  transition: all 0.6s ease;
 }
 .top_nav .dropbtn h1:hover {
   color:ghostwhite;
+  transition: all 0.6s ease;
 }
 .dropdown {
   float: none;
@@ -38,6 +40,7 @@ instead of next to each other */
   justify-content: center;
   position: relative;
   text-align: center;
+  transition: all 0.6s ease;
 }
 .dropdown-content {
   display: none;
@@ -53,6 +56,7 @@ instead of next to each other */
   color: transparent;
   padding: 5px;
   width: auto;
+  transition: all 0.6s ease;
 }
 .dropdown:hover .dropdown-content {
   float: none;
@@ -101,7 +105,6 @@ h3 {
 h4 {
   text-align: center;
   color: ghostwhite;
-  margin-top: 80px;
   background: linear-gradient(to bottom, ghostwhite, dodgerblue );
   background-clip: text;
   color: transparent;
@@ -136,16 +139,57 @@ h4 {
     border-radius: 8px;
   }
 }
+
+.about_me h4 {
+  margin-top: 80px;
+}
+
+.resume {
+  max-width: 600px;
+  display: block;
+  position: relative;
+  margin: 15px auto 15px auto;
+  border-radius: 8px;
+  border-color: ghostwhite;
+  border-style: inset;
+}
+.resume:hover {
+  border-color: dodgerblue;
+  border-style: inset;
+  background-color: ghostwhite;
+  box-shadow: 5px 5px 15px 5px ghostwhite;
+  margin-top: -35px;
+  margin-bottom: 35px;
+  transition: all 0.6s ease;
+
+}
+
+.projects {
+  max-width: 600px;
+  display: block;
+  position: relative;
+  margin: 15px auto 15px auto;
+  border-radius: 8px;
+  border-color: ghostwhite;
+  border-style: inset;
+}
+.projects:hover {
+  border-color: dodgerblue;
+  border-style: inset;
+  background-color: ghostwhite;
+  box-shadow: 5px 5px 15px 5px ghostwhite;
+  margin-top: -35px;
+  margin-bottom: 35px;
+  transition: all 0.6s ease;
+}
+
 .bottom_nav {
-  position: fixed;
   width: 100%;
-  bottom: 0;
+  margin: 0px auto 0px auto;
   float: none;
-  padding-bottom: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  font-size: 17px;
   text-align: center;
 }
 .bottom_nav a {
@@ -159,4 +203,17 @@ h4 {
   text-align: center;
   text-decoration: none;
   color: ghostwhite;
+  transition: all 0.5s ease;
+}
+
+#bottom_nav {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.box{
+  height:45px;
+  width:100%;
 }
