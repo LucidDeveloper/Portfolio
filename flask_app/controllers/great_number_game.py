@@ -4,7 +4,7 @@ from flask_app import app
 from flask import render_template, redirect, request, session
 import random
 
-@app.route('/projects/great_number_game')
+@app.route('/projects/great-number-game')
 def great_number_game():
     if 'random_int' not in session:
         session['random_int'] = random.randint(1,100)
@@ -15,19 +15,19 @@ def great_number_game():
     return render_template('/projects/great_number_game.html', random_int = session['random_int'], guess = session['guess'], attempts = session['attempts'] )
 
 @app.route('/process/guess', methods = ['post'])
-def guess():
+def process_guess():
     session['guess'] = int(request.form['guess'])
     
     if 'attempts' not in session:
         session['attempts'] = 1
     else:
         session['attempts'] += 1
-    return redirect('/projects/great_number_game')
+    return redirect('/projects/great-number-game')
 
 @app.route('/process/reset')
-def reset():
+def process_reset():
     session.clear()
-    return redirect('/projects/great_number_game')
+    return redirect('/projects/great-number-game')
 
 @app.route('/process/leader_board', methods = ['post'])
 def process_leader_board():

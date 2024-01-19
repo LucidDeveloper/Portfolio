@@ -1,6 +1,6 @@
 {% extends 'layouts/base.html' %}
 
-{% block title %} LucidDeveloper/Projects/GreatNumberGame {% endblock %}
+{% block title %}Great Number Game{% endblock %}
 
 {%block head %}
     <!-- Bootstrap CSS -->
@@ -17,7 +17,7 @@
     <div class="top_nav">
         <div class="dropdown">
         <div class="dropbtn">
-            <a href='/projects/great_number_game'><h1>GreatNumberGame</h1></a>
+            <a href='/projects/great-number-game'><h1>GreatNumberGame</h1></a>
         </div>
         <div class="dropdown-content">
             <a href="/resume">Resume</a>
@@ -51,7 +51,7 @@
                     class="text-secondary text-center border border-3 border-warning rounded"
                     type="number"
                     name="guess"
-                    value=""
+                    value="0"
                     placeholder="Guess"
                     min="1"
                     max="100"
@@ -85,7 +85,7 @@
                 class="text-secondary text-center border border-3 border-warning rounded"
                 type="number"
                 name="guess"
-                value=""
+                value="0"
                 placeholder="Guess"
                 min="1"
                 max="100"
@@ -151,7 +151,7 @@
             class="text-secondary text-center border border-3 border-warning rounded"
             type="number"
             name="guess"
-            value=""
+            value="0"
             placeholder="Guess"
             min="1"
             max="100"

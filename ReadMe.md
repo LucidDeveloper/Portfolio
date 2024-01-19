@@ -1,4 +1,5 @@
 # Portfolio
+## LucidDeveloper
 
 **Author**
 Gianni M. Javier
@@ -6,16 +7,20 @@ Gianni M. Javier
 **Origin**
 12/04/2023
 
-## Summary
+## Summary:
+**Personal Website created to showcase my projects and resume.**
 
-Full Stack Web App developed to display Personal Portfolio.
+**This web application was created using the Flask framework.**
 
-## Technology
-**Front End Tools**
-Html/Css
+**Styled using Css and Bootstrap.**
 
-**Back End Tools**
-Python
+**Hosted on DigitalOcean.**
 
-**Framework**
-Flask
+## Technologies:
+**HTML, CSS, JavaScript, Python, Flask, Jinja**
+
+## Link: 
+**luciddeveloper.com**
+
+## GitHub: 
+**github.com/LucidDeveloper/Portfolio**
