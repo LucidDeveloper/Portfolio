@@ -1,7 +1,10 @@
-from flask_app import app
-from flask_app.controllers import controller
-# Controllers act as servers for each distinct model within the app
-# Models are classes which interact with the MySQL Database in order to Create an Object Oriented Relational Database System
+# server.py is the entry point for the application.
+# Run this file to start the server.
 
-if __name__ == "__main__":
+from flask_app import app
+
+# Controllers act as servers for each distinct model and respective templates within the app
+from flask_app.controllers import controller, great_number_game
+
+if __name__ == '__main__':
     app.run(debug=True)

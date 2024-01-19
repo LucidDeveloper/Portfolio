@@ -1,31 +1,21 @@
-# Controllers act as servers for each distinct model and respective templates within the app
+# Controller controller.py is the primary controller for the Flask App
+
 from flask_app import app
+
 from flask import redirect, render_template
 
 @app.route('/')
 def root():
-    return render_template('index.html')
+    return render_template('/portfolio/index.html')
 
 @app.route('/resume')
 def resume():
-    return render_template('resume.html')
+    return render_template('/portfolio/resume.html')
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
+    return render_template('/portfolio/projects.html')
 
 @app.route('/home')
 def home():
     return redirect('/')
-
-@app.route('/linked_in')
-def linked_in():
-    return redirect('https://www.linkedin.com/in/lucid-developer/')
-
-@app.route('/git_hub')
-def git_hub():
-    return redirect('https://www.github.com/LucidDeveloper/')
-
-@app.route('/email')
-def email():
-    return redirect('mailto:lucid_developer@proton.me')

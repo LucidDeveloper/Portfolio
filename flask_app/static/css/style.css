@@ -65,9 +65,7 @@ instead of next to each other */
   justify-content: space-between;
   align-items: normal;
 }
-/* Add responsiveness - on screens less than 500px, 
-make the navigation links appear on top of each other, 
-instead of next to each other */
+/* Add responsiveness - on screens less than 500px */
 @media screen and (max-width: 500px) {
   .dropdown:hover .dropdown-content {
     float: none;
@@ -77,11 +75,12 @@ instead of next to each other */
   }
 }
 
+/* Body */
 body {
   margin: auto;
   width: auto;
-  height: 940px;
-  max-height: auto;;
+  height: fit-content;
+  min-height: 960px;
   background: radial-gradient(circle, crimson , dodgerblue );
   background-size: cover;
   background-repeat: no-repeat;
@@ -109,6 +108,13 @@ h4 {
   background-clip: text;
   color: transparent;
 }
+
+.box{
+  height:25px;
+  width:100%;
+}
+
+/* About Me */
 .img img {
   max-width: 300px;
   max-height: 300px;
@@ -125,12 +131,14 @@ h4 {
     border-radius: 8px;
   }
 }
+
 .about_me {
   max-width: 600px;
   display: block;
   margin: 15px auto 15px auto;
   border-radius: 8px;
 }
+/* Add responsiveness - on screens less than 500px */
 @media screen and (max-width: 500px) {
   .about_me {
     max-width: 400px;
@@ -144,6 +152,7 @@ h4 {
   margin-top: 80px;
 }
 
+/* Resume */
 .resume {
   max-width: 600px;
   display: block;
@@ -156,7 +165,7 @@ h4 {
 .resume:hover {
   border-color: dodgerblue;
   border-style: inset;
-  background-color: ghostwhite;
+  background: radial-gradient(circle, crimson , dodgerblue );
   box-shadow: 5px 5px 15px 5px ghostwhite;
   margin-top: -35px;
   margin-bottom: 35px;
@@ -164,6 +173,7 @@ h4 {
 
 }
 
+/* Projects */
 .projects {
   max-width: 600px;
   display: block;
@@ -176,13 +186,14 @@ h4 {
 .projects:hover {
   border-color: dodgerblue;
   border-style: inset;
-  background-color: ghostwhite;
+  background: radial-gradient(circle, crimson , dodgerblue );
   box-shadow: 5px 5px 15px 5px ghostwhite;
   margin-top: -35px;
   margin-bottom: 35px;
   transition: all 0.6s ease;
 }
 
+/* Bottom Navigation */
 .bottom_nav {
   width: 100%;
   margin: 0px auto 0px auto;
@@ -191,6 +202,20 @@ h4 {
   flex-direction: row;
   justify-content: space-evenly;
   text-align: center;
+}
+/* Add responsiveness - on screens less than 500px */
+@media screen and (max-width: 500px) {
+  .bottom_nav {
+    flex-direction: column;
+  }
+}
+/* Prioritizes Fixed Position on Pages with Less Content */
+#bottom_nav {
+  width: 100%;
+  position: fixed;
+  float:none;
+  bottom: 0px;
+  margin-bottom: 0px;
 }
 .bottom_nav a {
   text-align: center;
@@ -206,14 +231,3 @@ h4 {
   transition: all 0.5s ease;
 }
 
-#bottom_nav {
-  width: 100%;
-  position: fixed;
-  bottom: 0px;
-  margin-bottom: 0px;
-}
-
-.box{
-  height:45px;
-  width:100%;
-}
