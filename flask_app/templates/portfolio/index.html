@@ -3,8 +3,11 @@
 
 {% block title %}Home{% endblock %} 
 
-{% block body %}
-  <body>
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/index_style.css') }}">
+{% endblock %}
+
+{% block content %}
     <div class="top_nav">
       <div class="dropdown">
         <div class="dropbtn"><a href='/'><h1>LucidDeveloper</h1></a></div>
@@ -29,12 +32,6 @@
         <h4>Thank you for visiting!</h4>
       </div>
     </div>
+    {% endblock %}
 
-    <div class="bottom_nav" id="bottom_nav">
-      <h5><a href="https://www.linkedin.com/in/lucid-developer/" target="_blank">LinkedIn</a></h5>
-      <h5><a href="https://www.github.com/LucidDeveloper/" target="_blank">GitHub</a></h5>
-      <h5><a href="mailto:lucid_developer@proton.me">Email</a></h5>
-    </div>
-  </body>
-{% endblock %}
 

@@ -1,0 +1,9 @@
+/* Prioritizes Fixed Position on Pages with Less Content */
+#bottom_nav 
+{
+    width: 100%;
+    position: fixed;
+    float:none;
+    bottom: 0px;
+    margin-bottom: 0px;
+}

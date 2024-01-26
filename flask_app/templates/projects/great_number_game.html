@@ -12,12 +12,11 @@
     />
 {% endblock %}
 
-{% block body %}
-<body>
+{% block content %}
     <div class="top_nav">
         <div class="dropdown">
         <div class="dropbtn">
-            <a href='/projects/great-number-game'><h1>GreatNumberGame</h1></a>
+            <a class= "text-decoration-none" href='/projects/great-number-game'><h1>GreatNumberGame</h1></a>
         </div>
         <div class="dropdown-content">
             <a href="/resume">Resume</a>
@@ -28,27 +27,27 @@
     </div>
 
     <div class="container p-2 mx-auto" style="width: fit-content">
-        <div class="row text-center bg-dark border border-4 border-bottom-0 border-warning rounded-top">
-            <h1 class="text-warning">Test Your Intellect</h1>
-            <p class="text-warning">I am thinking of a number between 1 and 100</p>
+        <div class="row text-center bg-dark border border-4 border-bottom-0 border-secondary rounded-top">
+            <h1 class="">Test Your Intellect</h1>
+            <h4 class="">I am thinking of a number between 1 and 100</h4>
         </div>
 
     {% if attempts < 7 %} {% if guess %} {% if guess > random_int: %}
-    <div class="row text-center bg-danger border border-4 border-top-0 border-bottom-0 border-warning">
+    <div class="row text-center bg-danger border border-4 border-top-0 border-bottom-0 border-secondary">
         <div class="col">
-            <h1 class="text-warning">Too High</h1>
+            <h1 class="">Too High</h1>
         </div>
     </div>
-    <div class="row bg-dark border border-4 border-top-0 border-warning rounded-bottom">
+    <div class="row bg-dark border border-4 border-top-0 border-secondary rounded-bottom">
         <form action="/process/guess" method="post">
             <div class="col text-center my-2">
-                <label class="text-warning text-center" for="guess">
-                    <strong>Take a guess</strong>
+                <label class="text-white text-center" for="guess">
+                    <strong>Try another guess</strong>
                 </label>
             </div>
             <div class="col text-center my-2">
                 <input
-                    class="text-secondary text-center border border-3 border-warning rounded"
+                    class="text-dark text-center border border-3 border-secondary rounded"
                     type="number"
                     name="guess"
                     value="0"
@@ -59,7 +58,7 @@
             </div>
             <div class="col text-center my-2">
                 <button
-                    class="btn btn-dark text-warning border border-2 border-warning rounded"
+                    class="btn btn-secondary text-white border border-2 border-white rounded"
                     type="submit">
                     Guess
                 </button>
@@ -68,21 +67,21 @@
     </div>
     {% endif %} 
     {% if guess < random_int: %}
-        <div class="row text-center bg-danger border border-4 border-top-0 border-bottom-0 border-warning">
-            <h1 class="text-warning">Too Low</h1>
+        <div class="row text-center bg-danger border border-4 border-top-0 border-bottom-0 border-secondary">
+            <h1 class="">Too Low</h1>
         </div>
         <div
-        class="row bg-dark border border-4 border-top-0 border-warning rounded-bottom"
+        class="row bg-dark border border-4 border-top-0 border-secondary rounded-bottom"
         >
             <form action="/process/guess" method="post">
                 <div class="col text-center my-2">
-                    <label class="text-warning text-center" for="guess">
-                        <strong>Take a guess</strong>
+                    <label class="text-white text-center" for="guess">
+                        <strong>Try another guess</strong>
                     </label>
                 </div>
         <div class="col text-center my-2">
             <input
-                class="text-secondary text-center border border-3 border-warning rounded"
+                class="text-dark text-center border border-3 border-secondary rounded"
                 type="number"
                 name="guess"
                 value="0"
@@ -92,32 +91,36 @@
             />
         </div>
         <div class="col text-center my-2">
-            <button class="btn btn-danger text-warning border border-2 border-warning rounded" type="submit">
+            <button class="btn btn-secondary text-white border border-2 border-white rounded" type="submit">
             Guess
             </button>
         </div>
         </form>
         </div>
-        {% endif %} {% if guess == random_int: %}
-        <div class="row bg-success border border-4 border-top-0 border-bottom-0 border-warning">
+    {% endif %} {% if guess == random_int: %}
+        <div class="row bg-success border border-4 border-top-0 border-bottom-0 border-secondary">
             <div class="row-md text-center">
-                <h2 class="text-warning">You Guessed It! My Number Was {{ random_int }}!</h2>
+                <h2 class="">Great Guess!</h2> 
+                <h2> My Number Was</h2> 
+                <h2 class="text-white"> {{ random_int }}!</h2>
         </div>
     </div>
 
-    <div class="row bg-success border border-4 border-top-0 border-bottom-0 border-warning">
+    <div class="row bg-success border border-4 border-top-0 border-bottom-0 border-secondary">
         <div class="col-md text-center">
-            <h1 class="text-warning">You Guessed My Number In Only {{ attempts }} Attempts!</h1>
+            <h2 class="">You Guessed Within</h2>
+                <h1 class="text-white"> {{ attempts }} </h1>
+                <h2> Attempts</h2>
         </div>
     </div>
 
-    <div class="row text-center bg-dark border border-4 border-top-0 border-warning rounded-bottom">
+    <div class="row text-center bg-dark border border-4 border-top-0 border-secondary rounded-bottom">
         <form action="/process/leader_board" method="post">
         <div class="col my-4">
             <label class="text-warning" for="name">
                 <h2>Would You Like to Join The Leaderboard?</h2></label>
             <input
-            class="text-secondary text-center my-2 form-control border border-warning rounded"
+            class="text-dark text-center my-2 form-control border border-secondary rounded"
             type="text"
             name="name"
             placeholder="Enter Your Name"
@@ -125,30 +128,30 @@
             />
         </div>
         <div class="row-md my-4 text-center">
-            <button class="btn btn-danger text-warning border border-2 border-warning rounded" type="submit">
+            <button class="btn btn-secondary text-white border border-2 border-white rounded" type="submit">
                 Add to Leaderboard
             </button>
         </div>
         </form>
         <div class="row my-2 text-center">
         <form action="/process/reset">
-            <button class="btn btn-danger text-warning border border-2 border-warning rounded" type="submit">
+            <button class="btn btn-secondary border border-2 border-white rounded" type="submit">
                 Try Again
             </button>
         </form>
         </div>
         </div>
-        {% endif %} {% else: %}
-        <div class="row bg-dark border border-4 border-top-0 border-warning rounded-bottom">
+    {% endif %} {% else: %}
+        <div class="row bg-dark border border-4 border-top-0 border-secondary rounded-bottom">
         <form action="/process/guess" method="post">
         <div class="col-md text-center my-2">
-            <label class="text-warning text-center" for="guess">
+            <label class=" text-white text-center" for="guess">
                 <strong>Take a guess</strong>
             </label>
         </div>
         <div class="col-md text-center my-2">
             <input
-            class="text-secondary text-center border border-3 border-warning rounded"
+            class="text-dark text-center border border-3 border-secondary rounded"
             type="number"
             name="guess"
             value="0"
@@ -158,7 +161,7 @@
             />
         </div>
         <div class="col-md text-center my-2">
-            <button class="btn btn-danger text-warning border border-2 border-warning rounded" type="submit">
+            <button class="btn btn-secondary text-white border border-2 border-white rounded" type="submit">
                 Guess
             </button>
         </div>
@@ -166,41 +169,28 @@
     </div>
     {% endif %} {% else %}
 
-    <div
-        class="row text-center bg-dark border border-4 border-top-0 border-warning rounded-bottom"
-    >
-        <div class="row-md bg-danger border-warning">
-            <h1 class="text-warning">Sorry, You Lose</h1>
-            <h2 class="text-warning">The Number Was {{ random_int }}!</h2>
-        </div>
-        <div class="row-md bg-dark">
-            <h1 class="text-warning">
-            You Exceded The Number of Allowed Attempts
-            </h1>
+    <div class="row text-center bg-dark border border-4 border-top-0 border-secondary rounded-bottom">
+        <div class="row-md bg-danger border-secondary">
+            <h1 class="">Sorry</h1>
+            <h2 class="">My Number Was </h2>
+            <h2 class="text-white">{{ random_int }}</h2>
         </div>
         <div class="row-md bg-dark my-2">
             <form action="/process/reset">
             <button
-                class="btn btn-danger text-warning border border-2 border-warning rounded"
+                class="btn btn-secondary text-white border border-2 border-white rounded"
                 type="submit"
             >Try Again</button>
             </form>
         </div>
-        </div>
+    </div>
         {% endif %}
-    </div>
-
-    <div class="bottom_nav" id="bottom_nav">
-        <h5><a href="https://www.linkedin.com/in/lucid-developer/" target="_blank">LinkedIn</a></h5>
-        <h5><a href="https://www.github.com/LucidDeveloper/" target="_blank">GitHub</a></h5>
-        <h5><a href="mailto:lucid_developer@proton.me">Email</a></h5>
-    </div>
+</div>
 
     <!-- Bootstrap JavaScript -->
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"
-    ></script>
-    </body>
+    crossorigin="anonymous">
+    </script>
 {% endblock %}
