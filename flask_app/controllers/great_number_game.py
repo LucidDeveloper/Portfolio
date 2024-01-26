@@ -12,7 +12,7 @@ def great_number_game():
         session['guess'] = 0
     if 'attempts' not in session:
         session['attempts'] = 0
-    return render_template('/projects/great_number_game.html', random_int = session['random_int'], guess = session['guess'], attempts = session['attempts'] )
+    return render_template('/projects/great_number_game/great_number_game.html', random_int = session['random_int'], guess = session['guess'], attempts = session['attempts'] )
 
 @app.route('/process/guess', methods = ['post'])
 def process_guess():
@@ -36,4 +36,4 @@ def process_leader_board():
 
 @app.route('/projects/leader_board')
 def leader_board():
-    return render_template('/projects/leader_board.html', name = session['name'], attempts = session['attempts'])
+    return render_template('/projects/great_number_game/leader_board.html', name = session['name'], attempts = session['attempts'])

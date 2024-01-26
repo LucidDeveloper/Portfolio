@@ -1,0 +1,62 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Show Users{% endblock %}
+
+{% block head  %}
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+crossorigin="anonymous">
+{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto my-2" style="width: fit-content;">
+        <div>
+            <h1 class=" text-secondary text-center">Show All Users</h1>
+        </div>
+        <div>
+            <table class="text-secondary table table-striped">
+                <thead>
+                    <tr>
+                        <th><h3 class="text-secondary">ID</h3></th>
+                        <th><h3 class="text-secondary">Full Name</h3></th>
+                        <th><h3 class="text-secondary">Email</h3></th>
+                        <th><h3 class="text-secondary">Created At</h3></th>
+                        <!-- On the Read (All) page add an Actions column -->
+                        <!-- Show link will render the Users Read (One) page -->
+                        <th><h3 class="text-secondary">Actions</h3></th>
+                    </tr>
+                </thead>
+                <!-- Display all users from the database on the Read (All) page -->
+                <!-- Redirect to Read (All) page after creating a new user, and the user just created should appear in the table -->
+                <tbody>
+                    {% for user in users  %}
+                        <tr>
+                            <td><h5 class="text-secondary">{{ user.id }}</h5></td>
+                            <td><h5 class="text-secondary">{{ user.first_name }} {{ user.last_name }}</h5></td>
+                            <td><h5 class="text-secondary">{{ user.email }}</h5></td>
+                            <td><h5 class="text-secondary">{{ user.created_at }}</h5></td>
+                            <!-- On the Read (All) page add an Actions column -->
+                            <!-- Show link will render the Users Read (One) page -->
+                            <td>
+                                <h5 class="text-secondary">
+                                    <a class = "text-light btn btn-secondary" href="/projects/users-crud/show/{{ user.id }}">Show</a> | 
+                                    <a class = "text-light btn btn-secondary" href="/projects/users-crud/edit/{{ user.id }}">Edit</a> | 
+                                    <a class = "text-light btn btn-secondary" href="/projects/users-crud/delete/{{ user.id }}">Delete</a>
+                                </h5>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div> 
+        <div>
+            <a class="text-light btn btn-secondary" href="/projects/users-crud/new">Add A New User</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+{% endblock %}

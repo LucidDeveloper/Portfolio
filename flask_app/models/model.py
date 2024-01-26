@@ -1,1 +1,0 @@
-# Models are classes which interact with the MySQL Database in order to Create an Object Oriented Relational Database System
