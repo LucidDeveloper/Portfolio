@@ -10,6 +10,7 @@
   font-size: 17px;
   text-align: center; /* If you want the text to be centered */
 }
+
 /* Add responsiveness - on screens less than 500px, 
 make the navigation links appear on top of each other, 
 instead of next to each other */
@@ -18,9 +19,11 @@ instead of next to each other */
     flex-direction: column;
   }
 }
+
 .top_nav a:hover {
   color: ghostwhite;
 }
+
 .dropbtn {
   background-color: inherit;
   color: ghostwhite;
@@ -30,10 +33,12 @@ instead of next to each other */
   text-align: center;
   transition: all 0.6s ease;
 }
+
 .top_nav .dropbtn h1:hover {
   color:ghostwhite;
   transition: all 0.6s ease;
 }
+
 .dropdown {
   float: none;
   display: flexbox;
@@ -43,12 +48,14 @@ instead of next to each other */
   text-align: center;
   transition: all 0.6s ease;
 }
+
 .dropdown-content {
   display: none;
   padding-top: 5px;
   position:relative;
   text-align: center;
 }
+
 .dropdown-content a {
   text-decoration: none;
   text-align: center;
@@ -59,6 +66,7 @@ instead of next to each other */
   width: auto;
   transition: all 0.6s ease;
 }
+
 .dropdown:hover .dropdown-content {
   float: none;
   display: flex; 
@@ -67,6 +75,7 @@ instead of next to each other */
   justify-content: space-between;
   align-items: normal;
 }
+
 /* Add responsiveness - on screens less than 500px */
 @media screen and (max-width: 500px) {
   .dropdown:hover .dropdown-content {
@@ -87,11 +96,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 @media screen and (max-width: 500px) {
   body {
     height: auto;
   }
 }
+
 a,
 h1,
 h2,
@@ -103,6 +114,7 @@ h3 {
   background-clip: text;
   color: transparent;
 }
+
 h4 {
   text-align: center;
   color: ghostwhite;
@@ -124,6 +136,7 @@ h4 {
   margin: 15px auto 15px auto;
   border-radius: 8px;
 }
+
 @media screen and (max-width: 500px) {
   .img img {
     max-width: 200px;
@@ -140,6 +153,7 @@ h4 {
   margin: 15px auto 15px auto;
   border-radius: 8px;
 }
+
 /* Add responsiveness - on screens less than 500px */
 @media screen and (max-width: 500px) {
   .about_me {
@@ -154,47 +168,6 @@ h4 {
   margin-top: 80px;
 }
 
-/* Resume */
-.resume {
-  max-width: 600px;
-  display: block;
-  position: relative;
-  margin: 15px auto 15px auto;
-  border-radius: 8px;
-  border-color: ghostwhite;
-  border-style: inset;
-}
-.resume:hover {
-  border-color: dodgerblue;
-  border-style: inset;
-  background: radial-gradient(circle, crimson , dodgerblue );
-  box-shadow: 5px 5px 15px 5px ghostwhite;
-  margin-top: -35px;
-  margin-bottom: 35px;
-  transition: all 0.6s ease;
-
-}
-
-/* Projects */
-.projects {
-  max-width: 600px;
-  display: block;
-  position: relative;
-  margin: 15px auto 15px auto;
-  border-radius: 8px;
-  border-color: ghostwhite;
-  border-style: inset;
-}
-.projects:hover {
-  border-color: dodgerblue;
-  border-style: inset;
-  background: radial-gradient(circle, crimson , dodgerblue );
-  box-shadow: 5px 5px 15px 5px ghostwhite;
-  margin-top: -35px;
-  margin-bottom: 35px;
-  transition: all 0.6s ease;
-}
-
 /* Bottom Navigation */
 .bottom_nav {
   width: 100%;
@@ -205,12 +178,14 @@ h4 {
   justify-content: space-evenly;
   text-align: center;
 }
+
 /* Add responsiveness - on screens less than 500px */
 @media screen and (max-width: 500px) {
   .bottom_nav {
     flex-direction: column;
   }
 }
+
 .bottom_nav a {
   text-align: center;
   text-decoration: none;
@@ -218,6 +193,7 @@ h4 {
   background-clip: text;
   color: transparent;
 }
+
 .bottom_nav a:hover {
   text-align: center;
   text-decoration: none;

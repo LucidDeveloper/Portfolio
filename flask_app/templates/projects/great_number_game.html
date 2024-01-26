@@ -15,14 +15,14 @@
 {% block content %}
     <div class="top_nav">
         <div class="dropdown">
-        <div class="dropbtn">
-            <a class= "text-decoration-none" href='/projects/great-number-game'><h1>GreatNumberGame</h1></a>
-        </div>
-        <div class="dropdown-content">
-            <a href="/resume">Resume</a>
-            <a href="/projects">Projects</a>
-            <a href="/home">Home</a>
-        </div>
+            <div class="dropbtn">
+                <a class= "text-decoration-none" href='/projects/great-number-game'><h1>GreatNumberGame</h1></a>
+            </div>
+            <div class="dropdown-content">
+                <a href="/resume">Resume</a>
+                <a href="/projects">Projects</a>
+                <a href="/home">Home</a>
+            </div>
         </div>
     </div>
 
@@ -33,18 +33,55 @@
         </div>
 
     {% if attempts < 7 %} {% if guess %} {% if guess > random_int: %}
-    <div class="row text-center bg-danger border border-4 border-top-0 border-bottom-0 border-secondary">
-        <div class="col">
-            <h1 class="">Too High</h1>
-        </div>
-    </div>
-    <div class="row bg-dark border border-4 border-top-0 border-secondary rounded-bottom">
-        <form action="/process/guess" method="post">
-            <div class="col text-center my-2">
-                <label class="text-white text-center" for="guess">
-                    <strong>Try another guess</strong>
-                </label>
+        <div class="row text-center bg-danger border border-4 border-top-0 border-bottom-0 border-secondary">
+            <div class="col">
+                <h1 class="">Too High</h1>
             </div>
+        </div>
+
+        <div class="row bg-dark border border-4 border-top-0 border-secondary rounded-bottom">
+            <form action="/process/guess" method="post">
+                <div class="col text-center my-2">
+                    <label class="text-white text-center" for="guess">
+                        <strong>Try another guess</strong>
+                    </label>
+                </div>
+                <div class="col text-center my-2">
+                    <input
+                        class="text-dark text-center border border-3 border-secondary rounded"
+                        type="number"
+                        name="guess"
+                        value="0"
+                        placeholder="Guess"
+                        min="1"
+                        max="100"
+                    />
+                </div>
+                
+                <div class="col text-center my-2">
+                    <button
+                        class="btn btn-secondary text-white border border-2 border-white rounded"
+                        type="submit">
+                        Guess
+                    </button>
+                </div>
+            </form>
+        </div>
+    {% endif %} 
+
+    {% if guess < random_int: %}
+        <div class="row text-center bg-danger border border-4 border-top-0 border-bottom-0 border-secondary">
+            <h1 class="">Too Low</h1>
+        </div>
+
+        <div class="row bg-dark border border-4 border-top-0 border-secondary rounded-bottom">
+            <form action="/process/guess" method="post">
+                <div class="col text-center my-2">
+                    <label class="text-white text-center" for="guess">
+                        <strong>Try another guess</strong>
+                    </label>
+                </div>
+
             <div class="col text-center my-2">
                 <input
                     class="text-dark text-center border border-3 border-secondary rounded"
@@ -56,136 +93,108 @@
                     max="100"
                 />
             </div>
+
             <div class="col text-center my-2">
-                <button
-                    class="btn btn-secondary text-white border border-2 border-white rounded"
-                    type="submit">
-                    Guess
+                <button class="btn btn-secondary text-white border border-2 border-white rounded" type="submit">
+                Guess
                 </button>
             </div>
-        </form>
-    </div>
+            </form>
+        </div>
     {% endif %} 
-    {% if guess < random_int: %}
-        <div class="row text-center bg-danger border border-4 border-top-0 border-bottom-0 border-secondary">
-            <h1 class="">Too Low</h1>
-        </div>
-        <div
-        class="row bg-dark border border-4 border-top-0 border-secondary rounded-bottom"
-        >
-            <form action="/process/guess" method="post">
-                <div class="col text-center my-2">
-                    <label class="text-white text-center" for="guess">
-                        <strong>Try another guess</strong>
-                    </label>
-                </div>
-        <div class="col text-center my-2">
-            <input
-                class="text-dark text-center border border-3 border-secondary rounded"
-                type="number"
-                name="guess"
-                value="0"
-                placeholder="Guess"
-                min="1"
-                max="100"
-            />
-        </div>
-        <div class="col text-center my-2">
-            <button class="btn btn-secondary text-white border border-2 border-white rounded" type="submit">
-            Guess
-            </button>
-        </div>
-        </form>
-        </div>
-    {% endif %} {% if guess == random_int: %}
+    
+    {% if guess == random_int: %}
         <div class="row bg-success border border-4 border-top-0 border-bottom-0 border-secondary">
             <div class="row-md text-center">
                 <h2 class="">Great Guess!</h2> 
                 <h2> My Number Was</h2> 
                 <h2 class="text-white"> {{ random_int }}!</h2>
+            </div>
         </div>
-    </div>
 
-    <div class="row bg-success border border-4 border-top-0 border-bottom-0 border-secondary">
-        <div class="col-md text-center">
-            <h2 class="">You Guessed Within</h2>
-                <h1 class="text-white"> {{ attempts }} </h1>
-                <h2> Attempts</h2>
+        <div class="row bg-success border border-4 border-top-0 border-bottom-0 border-secondary">
+            <div class="col-md text-center">
+                <h2 class="">You Guessed Within</h2>
+                    <h1 class="text-white"> {{ attempts }} </h1>
+                    <h2> Attempts</h2>
+            </div>
         </div>
-    </div>
 
-    <div class="row text-center bg-dark border border-4 border-top-0 border-secondary rounded-bottom">
-        <form action="/process/leader_board" method="post">
-        <div class="col my-4">
-            <label class="text-warning" for="name">
-                <h2>Would You Like to Join The Leaderboard?</h2></label>
-            <input
-            class="text-dark text-center my-2 form-control border border-secondary rounded"
-            type="text"
-            name="name"
-            placeholder="Enter Your Name"
-            value=""
-            />
+        <div class="row text-center bg-dark border border-4 border-top-0 border-secondary rounded-bottom">
+            <form action="/process/leader_board" method="post">
+                <div class="col my-4">
+                    <label class="text-warning" for="name">
+                        <h2>Would You Like to Join The Leaderboard?</h2></label>
+                    <input
+                    class="text-dark text-center my-2 form-control border border-secondary rounded"
+                    type="text"
+                    name="name"
+                    placeholder="Enter Your Name"
+                    value=""
+                    />
+                </div>
+                <div class="row-md my-4 text-center">
+                    <button class="btn btn-secondary text-white border border-2 border-white rounded" type="submit">
+                        Add to Leaderboard
+                    </button>
+                </div>
+            </form>
+            
+            <div class="row my-2 text-center">
+                <form action="/process/reset">
+                    <button class="btn btn-secondary border border-2 border-white rounded" type="submit">
+                        Try Again
+                    </button>
+                </form>
+            </div>
         </div>
-        <div class="row-md my-4 text-center">
-            <button class="btn btn-secondary text-white border border-2 border-white rounded" type="submit">
-                Add to Leaderboard
-            </button>
-        </div>
-        </form>
-        <div class="row my-2 text-center">
-        <form action="/process/reset">
-            <button class="btn btn-secondary border border-2 border-white rounded" type="submit">
-                Try Again
-            </button>
-        </form>
-        </div>
-        </div>
-    {% endif %} {% else: %}
+    {% endif %} 
+    
+    {% else %}
         <div class="row bg-dark border border-4 border-top-0 border-secondary rounded-bottom">
-        <form action="/process/guess" method="post">
-        <div class="col-md text-center my-2">
-            <label class=" text-white text-center" for="guess">
-                <strong>Take a guess</strong>
-            </label>
-        </div>
-        <div class="col-md text-center my-2">
-            <input
-            class="text-dark text-center border border-3 border-secondary rounded"
-            type="number"
-            name="guess"
-            value="0"
-            placeholder="Guess"
-            min="1"
-            max="100"
-            />
-        </div>
-        <div class="col-md text-center my-2">
-            <button class="btn btn-secondary text-white border border-2 border-white rounded" type="submit">
-                Guess
-            </button>
-        </div>
-        </form>
-    </div>
-    {% endif %} {% else %}
-
-    <div class="row text-center bg-dark border border-4 border-top-0 border-secondary rounded-bottom">
-        <div class="row-md bg-danger border-secondary">
-            <h1 class="">Sorry</h1>
-            <h2 class="">My Number Was </h2>
-            <h2 class="text-white">{{ random_int }}</h2>
-        </div>
-        <div class="row-md bg-dark my-2">
-            <form action="/process/reset">
-            <button
-                class="btn btn-secondary text-white border border-2 border-white rounded"
-                type="submit"
-            >Try Again</button>
+            <form action="/process/guess" method="post">
+                <div class="col-md text-center my-2">
+                    <label class=" text-white text-center" for="guess">
+                        <strong>Take a guess</strong>
+                    </label>
+                </div>
+                <div class="col-md text-center my-2">
+                    <input
+                    class="text-dark text-center border border-3 border-secondary rounded"
+                    type="number"
+                    name="guess"
+                    value="0"
+                    placeholder="Guess"
+                    min="1"
+                    max="100"
+                    />
+                </div>
+                <div class="col-md text-center my-2">
+                    <button class="btn btn-secondary text-white border border-2 border-white rounded" type="submit">
+                        Guess
+                    </button>
+                </div>
             </form>
         </div>
-    </div>
-        {% endif %}
-</div>
+    {% endif %} 
+    
+    {% else %}
+        <div class="row text-center bg-dark border border-4 border-top-0 border-secondary rounded-bottom">
+            <div class="row-md bg-danger border-secondary">
+                <h1 class="">Sorry</h1>
+                <h2 class="">My Number Was </h2>
+                <h2 class="text-white">{{ random_int }}</h2>
+            </div>
+            <div class="row-md bg-dark my-2">
+                <form action="/process/reset">
+                    <button
+                        class="btn btn-secondary text-white border border-2 border-white rounded"
+                        type="submit"
+                    >Try Again</button>
+                </form>
+            </div>
+        </div>
+    {% endif %}
 
     <!-- Bootstrap JavaScript -->
     <script

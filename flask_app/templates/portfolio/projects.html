@@ -2,10 +2,16 @@
 
 {% block title %}Projects{% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/projects_style.css') }}">
+{% endblock %}
+
 {% block content %}
     <div class="top_nav">
       <div class="dropdown">
-        <div class="dropbtn"><a href='/projects'><h1>Projects</h1></a></div>
+        <div class="dropbtn">
+          <a href='/projects'><h1>Projects</h1></a>
+        </div>
         <div class="dropdown-content">
           <a href="/resume">Resume</a>
           <a href="/home">Home</a>
@@ -14,67 +20,36 @@
     </div>
 
     <div class="main">
-      <div class="box"></div>
+      <div class="box">
+      </div>
 
       <div class="projects">
+        <img src="" alt="Portfolio" width="500" height="300">
         <h3>LucidDeveloper</h3>
-        <h4>Personal Website</h4>
-        <h4>Technologies: HTML, CSS, JavaScript, Python, Flask</h4>
-        <h4>Link: <a href="https://luciddeveloper.com">luciddeveloper.com</a></h4>
-        <h4>GitHub: <a href="">luciddeveloper.com</a></h4>
-        <h4>Created a personal website to showcase my projects and resume</h4>
-        <h4>Created a blog to share my thoughts and experiences</h4>
-        <h4>Implemented a contact form to allow users to contact me</h4>
-        <h4>Implemented a login system to allow users to create accounts, login, and logout</h4>
-        <h4>Implemented a blog system to allow users to create, edit, and delete posts</h4>
-        <h4>Implemented a comment system to allow users to comment on posts</h4>
-        <h4>Implemented a search feature to allow users to search for posts</h4>
-        <h4>Implemented a pagination feature to allow users to navigate through posts</h4>
-        <h4>Implemented a password reset feature to allow users to reset their passwords</h4>
-        <h4>Implemented a profile feature to allow users to update their profile pictures and information</h4>
+        <h4>LucidDeveloper is a personal website built with the Flask framework in order 
+        to showcase my projects and resume.</h4>
+        <h4>Technologies: HTML, CSS, Bootstrap, JavaScript, Python, Flask, Jinja, SQL Alchemy</h4>
+        <h4>Link: <a href="/home">LucidDeveloper</a></h4>
+        <h4>GitHub: <a href="https://www.github.com/LucidDeveloper/Portfolio/">github.com/LucidDeveloper/Portfolio</a></h4>
       </div>
 
       <div class="projects">
-        <h3>UCI Course Planner</h3>
-        <h4>Course Planning Web Application</h4>
-        <h4>Technologies: HTML, CSS, JavaScript, Python, Flask, MongoDB</h4>
-        <h4>Link: <a href="">ucicourseplanner.com</a></h4>
-        <h4>GitHub: <a href="">ucicourseplanner.com</a></h4>
-        <h4>Created a web application to help students plan their courses</h4>
-        <h4>Implemented a course search feature to find courses based on course code, title, and description</h4>
-        <h4>Implemented a course planning feature to help students plan their courses</h4>
-        <h4>Implemented a course scheduling feature to help students schedule their courses</h4>
-        <h4>Implemented a course sharing feature to allow students to share their course plans</h4>
-        <h4>Implemented a course rating feature to allow students to rate courses</h4>
-        <h4>Implemented a course review feature to allow students to review courses</h4>
-        <h4>Implemented a course discussion feature to allow students to discuss courses</h4>
-        <h4>Implemented a course recommendation feature to recommend courses to students</h4>
-        <h4>Implemented a course statistics feature to show statistics about courses</h4>
-        <h4>Implemented a course prerequisite feature to show prerequisites for courses</h4>
-        <h4>Implemented a course grade distribution feature to show grade distributions for courses</h4>
+        <img src="" alt="Users CRUD" width="500" height="300">
+        <h3>Users CRUD</h3>
+        <h4>Users CRUD is a simple CRUD application which allows users to create, edit, and delete accounts.</h4>
+        <h4>Technologies: HTML, CSS, Bootstrap, JavaScript, Python, Flask, Jinja, SQL Alchemy</h4>
+        <h4>Link: <a href="/projects/users-crud">Users CRUD</a></h4>
+        <h4>GitHub: <a href="https://www.github.com/LucidDeveloper/CodingDojo/">github.com/LucidDeveloper/CodingDojo</a></h4>
       </div>
 
       <div class="projects">
-        <h2>Flask App</h2>
-        <img src="" alt="Flask App" width="500" height="300">
-        <h4>Flask App is a web application that I created using the Flask framework. 
-          It is hosted on Heroku and uses a PostgreSQL database. 
-          It is a simple web application that allows users to create accounts, login, and logout. 
-          It also allows users to create, edit, and delete posts. 
-          The application is styled using CSS and Bootstrap.</h4>
-        <a href="">View Project</a>
+        <img src="" alt="Great Number Game" width="500" height="300">
+        <h3>Great Number Game</h3>
+        <h4>Great Number Game is a simple web application which picks a random number and allows the user 
+        multiple attempts to guess the number.</h4>
+        <h4>Technologies: HTML, CSS, Bootstrap, JavaScript, Python, Flask, Jinja</h4>
+        <h4>Link: <a href="/projects/great-number-game">Great Number Game</a></h4>
+        <h4>GitHub: <a href="https://www.github.com/LucidDeveloper/CodingDojo/">github.com/LucidDeveloper/CodingDojo</a></h4>
       </div>
     </div>
-
-    <div class="projects">
-      <h2>Great Number Game</h2>
-      <img src="" alt="Great Number Game" width="500" height="300">
-      <h4>UCI Course Planner is a web application that I created using the Flask framework. 
-        It is hosted on Heroku and uses a MongoDB database. 
-        It is a simple web application that allows students to search for courses, plan their courses, and schedule their courses. 
-        It also allows students to share their course plans, rate courses, review courses, and discuss courses. 
-        The application is styled using CSS and Bootstrap.</h4>
-      <a href='/projects/great-number-game'>View Project</a>
-    </div>
-
 {% endblock %}

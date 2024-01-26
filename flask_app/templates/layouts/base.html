@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{% block title %} {% endblock %} | LucidDeveloper</title>
         <link rel="stylesheet" href="{{ url_for('static', filename = 'css/base_style.css') }}">
+
         {% block head %}
         {% endblock %}
     </head>
@@ -13,10 +14,9 @@
     {% endblock %}
 
     <div class="bottom_nav fixed-bottom" id="bottom_nav">    
-    <h5><a href="https://www.linkedin.com/in/gianni-m-javier/" target="_blank">LinkedIn</a></h5>
-    <h5><a href="https://www.github.com/LucidDeveloper/" target="_blank">GitHub</a></h5>
+    <h5><a href="https://www.linkedin.com/in/gianni-m-javier" target="_blank">LinkedIn</a></h5>
+    <h5><a href="https://www.github.com/LucidDeveloper" target="_blank">GitHub</a></h5>
     <h5><a href="mailto:gianni.m.javier@luciddeveloper.com">Email</a></h5> 
     </div>
-
     </body>
 </html>

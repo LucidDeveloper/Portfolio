@@ -1,0 +1,20 @@
+/* Projects */
+.projects {
+    max-width: 600px;
+    display: block;
+    position: relative;
+    margin: 15px auto 15px auto;
+    border-radius: 8px;
+    border-color: ghostwhite;
+    border-style: inset;
+}
+
+.projects:hover {
+    border-color: dodgerblue;
+    border-style: inset;
+    background: radial-gradient(circle, crimson , dodgerblue );
+    box-shadow: 5px 5px 15px 5px ghostwhite;
+    margin-top: -35px;
+    margin-bottom: 35px;
+    transition: all 0.6s ease;
+}

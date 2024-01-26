@@ -2,11 +2,16 @@
 
 {% block title %}Resume{% endblock %}
 
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/resume_style.css') }}">
+{% endblock %}
+
 {% block content %}
-  <body>
     <div class="top_nav">
       <div class="dropdown">
-        <div class="dropbtn"><a href='/resume'><h1>Resume</h1></a></div>
+        <div class="dropbtn">
+          <a href='/resume'><h1>Resume</h1></a>
+        </div>
         <div class="dropdown-content">
           <a href="/projects">Projects</a>
           <a href="/home">Home</a>
@@ -14,55 +19,44 @@
       </div>
     </div>
 
-    <d class="main">
-      <div class="box"></div>
-      
-      <div class="resume">
-          <h4>My resume is available for download <a href="/static/resume.pdf" download>here</a>.</h4>
-          <h4>My resume is also available on <a href="https://www.linkedin.com/in/alexander-lee-1b1b1a1b1/" target="_blank">LinkedIn</a>.</h4>
-          <h4>My resume is also available on <a href="">.</a></h4>
+    <div class="main">
+      <div class="box">
       </div>
 
       <div class="resume">
         <h2>Education</h2>
-        <h3>University of California, Irvine</h3>
-        <h4>Bachelor of Science in Computer Science</h4>
-        <h4>September 2018 - June 2022</h4>
-        <h4>GPA: 3.5</h4>
-      </div>
-
-      <div class="resume">
-        <h2>Skills</h2>
-        <h3>Programming Languages</h3>
-        <h4>Python, Java, C++, C, JavaScript, HTML, CSS, SQL</h4>
-        <h3>Technologies</h3>
-        <h4>Git, Linux, AWS, Docker, Flask, React, Node.js, MongoDB, MySQL, PostgreSQL</h4>
-        <h3>Other</h3>
-        <h4>Problem Solving, Teamwork, Communication, Leadership, Time Management</h4>
-      </div>
-
-        <div class="resume">
-        <h2>Activities</h2>
-        <h3>UCI ACM</h3>
-        <h4>Member</h4>
-        <h4>September 2018 - Present</h4>
-        <h3>UCI Cybersecurity Club</h3>
-        <h4>Member</h4>
-        <h4>September 2018 - Present</h4>
-        <h3>UCI Intramural Sports</h3>
-        <h4>Member</h4>
-        <h4>September 2018 - Present</h4>
+        <br>
+        <h3>New York City College of Technology at CUNY</h3>
+        <h4>Bachelor of Technology in Computer Systems</h4>
+        <h4>January 2023 - Present</h4>
+        <h4>GPA: 4.0</h4>
+        <h3>Boston University</h3>
+        <h4>Bachelor of Science in Biomedical Engineering</h4>
+        <h4>September 2007 - December 2012</h4>
       </div>
 
       <div class="resume">
         <h2>Experience</h2>
-        <h3>Software Engineering Intern</h3>
-        <h4>June 2021 - September 2021</h4>
-        <h4>Amazon Web Services</h4>
-        <h4>Technologies: Java, AWS, Docker, Linux</h4>
-        <h4>Worked on the AWS CloudWatch team</h4>
-        <h4>Implemented a feature to allow users to create dashboards from CloudWatch metrics</h4>
+        <br>
+        <h3>Program/Learning/Technical Aide</h3>
+        <h4>September 2023 - Present</h4>
+        <h4>RF CUNY</h4>
+        <h4>Technologies: Java, C++, Dart, Python, Html, Css, Javascript, Flutter, Flask</h4>
+        <h4>As a tutor in the Computer Systems department I assisted students in developing their
+        logical thinking and problem solving skills as they worked on class assignments and projects.</h4>
+      </div>
+
+      <div class="resume">
+        <h2>Activities</h2>
+        <br>
+        <h3>We Love U Foundation</h3>
+        <h4>Member</h4>
+        <h4>January 2014 - Present</h4>
+      </div>
+
+      <div class="resume">
+        <h4>My resume is available for download <a href="/static/resume.pdf" download>here</a>.</h4>
+        <h4>My resume is also available on <a href="https://www.linkedin.com/in/gianni-m-javier/" target="_blank">LinkedIn</a>.</h4>
       </div>
     </div>
-
 {% endblock %}
