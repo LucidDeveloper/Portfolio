@@ -23,22 +23,71 @@ connection = sqlite3.connect(db, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.
 # create a cursor to allow us to execute queries (sql commands)
 cursor = connection.cursor()
 
-print(cursor.execute('SELECT name FROM sqlite_master WHERE type="table" AND name="users";').fetchall())
-
-
-# create a table for users
-# cursor.execute('''CREATE TABLE users (
-#                 id INTEGER PRIMARY KEY AUTOINCREMENT, 
-#                 first_name TEXT, last_name TEXT, email TEXT,
-#                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-#                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-#                 );''')
-
 # Note!
 # in order to store the datetime information in the table, we need to use the column datatype ‘TIMESTAMP’.
 # sqlite3 will store the datetime information in the format of YYYY-MM-DD HH:MM:SS.SSS UTC
 # for local time you will have to import the datetime module from the python standard library 
 # and use the datetime.datetime.now() method and store it in a variable to be passed as a variable for query execution
+
+'''query = 'SELECT name FROM sqlite_master WHERE type="table" AND name="users";'
+table = cursor.execute(query).fetchone()
+
+if not table:
+    print("table does not exist")
+    print("creating table")
+'''
+
+
+#    # create a table for users
+#    cursor.execute('''CREATE TABLE users (
+#                    ROWID INTEGER PRIMARY KEY AUTOINCREMENT, 
+#                    first_name TEXT, last_name TEXT, email TEXT,
+#                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+#                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+#                    );''')
+
+
+'''
+else:
+    print(f"table {table} exists")
+
+query = 'SELECT * FROM users;'
+users = cursor.execute(query).fetchall()
+
+if not users:
+    print("table is empty")
+else:
+    print (f"table {table} is not empty")
+    for user in users:
+        print(user)'''
+
+        
+'''query = 'SELECT seq FROM sqlite_sequence WHERE name="users";'
+seq = cursor.execute(query).fetchall()
+print("Sequence:", seq)
+
+query = "SELECT last_insert_rowid() FROM users;"
+last_row_id = cursor.execute(query).fetchall()
+print("Inserted row with id:", last_row_id)
+
+query = 'SELECT max(id) from users;'
+list_max_id = cursor.execute(query).fetchall()
+print("List Max id:", list_max_id)
+
+query = 'SELECT max(id) from users;'
+max_id = cursor.execute(query).fetchone()
+print("Max id:", max_id)
+
+query = 'SELECT max(ROWID) from users;'
+list_max_id = cursor.execute(query).fetchall()
+print("List Max id:", list_max_id)
+
+query = 'SELECT max(ROWID) from users;'
+max_id = cursor.execute(query).fetchone()
+print("Max id:", max_id)
+'''
+
+
 
 
 # execute formatted sql commands to insert data into the table
@@ -63,11 +112,11 @@ print(cursor.execute('SELECT name FROM sqlite_master WHERE type="table" AND name
 
 
 # cursor.execute('SELECT * FROM users;')
-one = cursor.execute('SELECT * FROM users;').fetchone()
-many = cursor.fetchall()
-print(one)
-print(many)
-print(one[1])
+# one = cursor.execute('SELECT * FROM users;').fetchone()
+# many = cursor.fetchall()
+# print(one)
+# print(many)
+# print(one[1])
 
 
 # print(cursor.execute('SELECT name FROM sqlite_master WHERE type="table" AND name="users";').fetchall())
@@ -79,6 +128,21 @@ print(one[1])
 #print(query)
 #print(query[0])
 #print(str(query[0]).lower().find("nixon"))
+'''query = 'DROP TABLE users;'
+cursor.execute(query)
+query = 'SELECT name FROM sqlite_master WHERE type="table" AND name="users";'
+table = cursor.execute(query).fetchall()
+
+if  not  table:
+    print("table no longer  exists")
+else:
+    print(f"table {table} still exists")
+'''
+
+query = 'SELECT max(ROWID) FROM users;'
+max_id = cursor.execute(query).fetchone()
+
+print("max_id:", max_id[0])
 
 # save the changes to the database
 connection.commit()
