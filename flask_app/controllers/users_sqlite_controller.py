@@ -1,8 +1,19 @@
 # Controller users.py is the primary controller for the Users App
 
+# import app variable from flask_app package
 from flask_app import app
+# import render_template, request, redirect, session from flask
 from flask import render_template, request, redirect, session
-from flask_app.models.user import Users
+# import the Users class from the user_sqlite.py file in the models folder to interact with the database
+from flask_app.models.user_sqlite_model import Users
+
+# since sqlite3 uses UTC time for the TimeStamp, we need to import the datetime module from the python standard library
+# import the datetime module from the python standard library
+import datetime
+
+# for passing the date time as a variable, get the current datetime and store it in a variable
+# modules cannot be called and passed as a variable
+currentDateTime = datetime.datetime.now()
 
 # Display all users from the database on the Read (All) page
 @app.route('/projects/users-crud')
@@ -24,6 +35,8 @@ def users_process():
     data['first_name'] = request.form['first_name']
     data['last_name'] = request.form['last_name']
     data['email'] = request.form['email']
+    data['created_at'] = currentDateTime
+    data['updated_at'] = currentDateTime
     user_id = Users.save(data)
     session['user_id'] = user_id
     print(f"User with id {user_id} created.")
@@ -65,8 +78,9 @@ def users_edit_process_user_id(user_id):
     data['first_name'] = request.form['first_name']
     data['last_name'] = request.form['last_name']
     data['email'] = request.form['email']
+    data['updated_at'] = currentDateTime
     session['user_id'] = user_id
-    Users.update(data) # Time Stamp on Update
+    Users.update(data)
     print(f"Update made on User with id {data['user_id']}")
     return redirect('/projects/users-crud/show')
 
