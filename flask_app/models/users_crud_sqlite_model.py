@@ -1,5 +1,9 @@
-# Models user_sqlite_model.py is the model for the Users table in the users.db database.
-# All sqlite3 queries are stored in this file and executed in the sqlite_connection_configuration.py file.
+# Model file user_crud_sqlite_model.py filters data to and from the Database users.db 
+# using the sqlite3 queries and the sqlite_connection_configuration.py file.
+# As the client creates, reads, updates, and deletes information, the controller file 
+# users_crud_sqlite_controller.py, which interacts with the website, receives the data 
+# from the client to send to the model, the model then takes the data and updates the database,
+# and sends it back to the controller, which then presents it to the client on the website.
 
 # import database connection
 from flask_app.config.sqlite_connection_configuration import connectToSQLite
@@ -12,7 +16,7 @@ class Users:
     
     def __init__(self,data):
         # indices must be integers since data from sqlite
-        # is stored and sent as a tuple and not a dictionary
+        # is stored and sent as a tuple and not as a dictionary
         self.id = data[0]
         self.first_name = data[1]
         self.last_name = data[2]

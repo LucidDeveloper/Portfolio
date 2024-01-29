@@ -1,4 +1,8 @@
-# Controller great_number_game.py is the primary controller for the Great Number Game
+# Controller file great_number_game_controller.py is the primary controller for the Great Number Game.
+# The controller interacts with the website, receiving data from the client and saving it in session.
+# As the client enters new information, the controller updates the session data and sends it to the website,
+# which then displays the updated information, with the clients current guess, number of attempts, and proximity
+# to the random number.
 
 from flask_app import app
 from flask import render_template, redirect, request, session

@@ -1,0 +1,85 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/projects_style.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="top_nav">
+      <div class="dropdown">
+        <div class="dropbtn">
+          <a href='/projects'><h1>Projects</h1></a>
+        </div>
+        <div class="dropdown-content">
+          <a href="/resume">Resume</a>
+          <a href="/home">Home</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="box">
+      </div>
+
+      <div class="img">
+        <img
+          src="{{ url_for('static', filename = 'images/projects_picture.jpg') }}" alt="Projects Picture" />
+        </div>
+
+        <div class="box">
+        </div>
+
+      <div class="projects">
+        <img src="" alt="Users CRUD" width="500" height="300">
+        <h3>Users CRUD</h3>
+        <h4>Users CRUD is a an application which allows users to create, edit, view, and delete accounts.</h4>
+        <h4> Created a full stack web application using Python and the Flask framework.</h4>
+        <h4> Used SQLite to create a database and perform CRUD operations.</h4>
+        <h4> Used Bootstrap and Css to style the web application.</h4>
+        <h4> Used Jinja to render HTML templates through the use of inline variables.</h4>
+        <h4>Technologies: HTML, CSS, Bootstrap, Python, Flask, Jinja, SQL Alchemy</h4>
+        <h4><a href="/projects/users-crud">Try Users CRUD</a></h4>
+        <h4><a href="https://www.github.com/LucidDeveloper/Portfolio/blob/main/flask_app/models/users_crud_sqlite_model.py">
+          View Source Code</a>
+        </h4>
+      </div>
+
+      <div class="box">
+      </div>
+
+      <div class="projects">
+        <img src="" alt="Great Number Game" width="500" height="300">
+        <h3>Great Number Game</h3>
+        <h4>Great Number Game is an application which picks a random number and allows the user to guess that number.</h4>
+        <h4> Created a simple web application using Python and the Flask framework.</h4>
+        <h4> Used Session from the Flask framework to store data.</h4>
+        <h4> Used Bootstrap and Css to style the web application.</h4>
+        <h4> Used Jinja to render HTML templates making the webpage dynamic through the use of inline loops and if statments.</h4>
+        <h4>Technologies: HTML, CSS, Bootstrap, Python, Flask, Jinja</h4>
+        <h4><a href="/projects/great-number-game">Play Great Number Game</a></h4>
+        <h4><a href="https://www.github.com/LucidDeveloper/Portfolio/blob/main/flask_app/controller/great_number_game_controller.py">
+          View Source Code</a>
+        </h4>
+      </div>      
+      
+      <div class="box">
+      </div>
+
+      <div class="projects">
+        <img src="" alt="Portfolio" width="500" height="300">
+        <h3>LucidDeveloper</h3>
+        <h4>LucidDeveloper is my personal website built with the Flask framework in order to showcase my projects and resume.</h4>
+        <h4>Technologies: HTML, CSS, Bootstrap, JavaScript, Python, Flask, Jinja, SQLite</h4>
+        <h4><a href="/home">View LucidDeveloper</a></h4>
+        <h4><a href="https://www.github.com/LucidDeveloper/Portfolio/tree/main/flask_app/controllers.py">
+          View Source Code</a>
+        </h4>
+      </div>
+      
+      <div class="box">
+      </div>
+
+    </div>
+{% endblock %}
