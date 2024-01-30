@@ -1,6 +1,7 @@
 /* Navigation links */
 .top_nav {
   float:none;
+  margin: 10px auto 0px auto;
   display: flex;
   flex-direction: row;
   text-decoration: none;
@@ -8,7 +9,8 @@
   padding: auto;
   color: ghostwhite;
   font-size: 17px;
-  text-align: center; /* If you want the text to be centered */
+  text-align: center;
+  transition: all 0.6s ease;
 }
 
 /* Add responsiveness - on screens less than 500px, 
@@ -22,6 +24,7 @@ instead of next to each other */
 
 .top_nav a:hover {
   color: ghostwhite;
+  transition: all 0.6s ease;
 }
 
 .dropbtn {
@@ -54,6 +57,7 @@ instead of next to each other */
   padding-top: 5px;
   position:relative;
   text-align: center;
+  transition: all 0.6s ease;
 }
 
 .dropdown-content a {
@@ -74,6 +78,7 @@ instead of next to each other */
   flex-direction: column;
   justify-content: space-between;
   align-items: normal;
+  transition: all 0.6s ease;
 }
 
 /* Add responsiveness - on screens less than 500px */
@@ -83,6 +88,7 @@ instead of next to each other */
     display: block;
     align-items: center;
     width: 100%;
+    transition: all 0.6s ease;
   }
 }
 
@@ -106,18 +112,12 @@ body {
 a,
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
   text-align: center;
   text-decoration: none;
   margin: 0px;
-  background: linear-gradient(to bottom, ghostwhite, dodgerblue );
-  background-clip: text;
-  color: transparent;
-}
-
-h4 {
-  text-align: center;
-  color: ghostwhite;
   background: linear-gradient(to bottom, ghostwhite, dodgerblue );
   background-clip: text;
   color: transparent;
@@ -128,51 +128,12 @@ h4 {
   width:100%;
 }
 
-/* About Me */
-.img img {
-  max-width: 300px;
-  max-height: 300px;
-  display: block;
-  margin: 15px auto 15px auto;
-  border-radius: 8px;
-}
-
-@media screen and (max-width: 500px) {
-  .img img {
-    max-width: 200px;
-    max-height: 200px;
-    display: block;
-    margin: 15px auto 15px auto;
-    border-radius: 8px;
-  }
-}
-
-.about_me {
-  max-width: 600px;
-  display: block;
-  margin: 15px auto 15px auto;
-  border-radius: 8px;
-}
-
-/* Add responsiveness - on screens less than 500px */
-@media screen and (max-width: 500px) {
-  .about_me {
-    max-width: 400px;
-    display: block;
-    margin: 15px auto 15px auto;
-    border-radius: 8px;
-  }
-}
-
-.about_me h4 {
-  margin-top: 80px;
-}
-
 /* Bottom Navigation */
 .bottom_nav {
   width: 100%;
-  margin: 0px auto 0px auto;
+  margin: 10px auto 10px auto;
   float: none;
+  position:relative;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -198,6 +159,6 @@ h4 {
   text-align: center;
   text-decoration: none;
   color: ghostwhite;
-  transition: all 0.5s ease;
+  transition: all 0.6s ease;
 }
 

@@ -1,4 +1,6 @@
-# Controller portfolio.py is the primary controller for the Flask App
+# Controller index_controller.py is the primary controller for the Flask App.
+
+# Serving each page by its respective route.
 
 from flask_app import app
 

@@ -1,5 +1,6 @@
-# Model file user_crud_sqlite_model.py filters data to and from the Database users.db 
+# Model file user_crud_sqlite_model.py filters data to and from the Database users.db, 
 # using the sqlite3 queries and the sqlite_connection_configuration.py file.
+
 # As the client creates, reads, updates, and deletes information, the controller file 
 # users_crud_sqlite_controller.py, which interacts with the website, receives the data 
 # from the client to send to the model, the model then takes the data and updates the database,

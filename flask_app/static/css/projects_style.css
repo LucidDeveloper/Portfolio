@@ -4,9 +4,11 @@
     display: block;
     position: relative;
     margin: 15px auto 15px auto;
+    padding: 15px;
     border-radius: 8px;
     border-color: ghostwhite;
     border-style: inset;
+    transition: all 0.6s ease;
 }
 
 .projects:hover {
@@ -16,5 +18,37 @@
     box-shadow: 5px 5px 15px 5px ghostwhite;
     margin-top: -35px;
     margin-bottom: 35px;
+    transition: all 0.6s ease;
+}
+
+/* image */
+.projects_img img {
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    margin: 15px auto 15px auto;
+    border-radius: 75px;
+}
+
+@media screen and (max-width: 500px) {
+    .projects_img img {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin: 15px auto 15px auto;
+    border-radius: 75px;
+    }
+}
+
+/* links */
+.projects h3 a:hover {
+    color: ghostwhite;
+    text-decoration: none;
+    transition: all 0.6s ease;
+}
+
+.projects h4 a:hover {
+    color: ghostwhite;
+    text-decoration: none;
     transition: all 0.6s ease;
 }

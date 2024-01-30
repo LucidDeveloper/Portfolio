@@ -10,13 +10,24 @@
         {% endblock %}
     </head>
     <body>
-    {% block content %} 
-    {% endblock %}
+        <div class="top_nav">
+            <div class="dropdown">
+            <div class="dropbtn"><h1>{% block top_nav %}{% endblock %}</h1></div>
+            <div class="dropdown-content">
+                <a href="/resume">Resume</a>
+                <a href="/projects">Projects</a>
+                <a href="/home">Home</a>
+            </div>
+            </div>
+        </div>
 
-    <div class="bottom_nav fixed-bottom" id="bottom_nav">    
-    <h5><a href="https://www.linkedin.com/in/gianni-m-javier" target="_blank">LinkedIn</a></h5>
-    <h5><a href="https://www.github.com/LucidDeveloper" target="_blank">GitHub</a></h5>
-    <h5><a href="mailto:gianni.m.javier@luciddeveloper.com">Email</a></h5> 
-    </div>
+        {% block content %} 
+        {% endblock %}
+
+        <div class="bottom_nav {% block bottom_nav %}{% endblock%}" id="bottom_nav">    
+            <h5><a href="https://www.linkedin.com/in/gianni-m-javier" target="_blank">LinkedIn</a></h5>
+            <h5><a href="https://www.github.com/LucidDeveloper" target="_blank">GitHub</a></h5>
+            <h5><a href="mailto:gianni.m.javier@luciddeveloper.com">Email</a></h5> 
+        </div>
     </body>
 </html>

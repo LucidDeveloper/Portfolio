@@ -4,7 +4,7 @@
 from flask_app import app
 
 # Controllers act as servers for each distinct model and respective templates within the app
-from flask_app.controllers import great_number_game_controller, index_controller, users_crud_sqlite_controller
+from flask_app.controllers import great_number_game_controller, index_controller, users_crud_controller
 
 if __name__ == '__main__':
     app.run(debug=True)

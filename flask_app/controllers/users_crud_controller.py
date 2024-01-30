@@ -1,6 +1,8 @@
-# Controller file users_crud_sqlite_controller.py is the primary controller for the Users App.
-# The controller interacts with the website, receiving data from the client to send to the model, 
-# which interacts with the database, receiving data from the model to send back to the client, to then 
+# Controller file users_crud_controller.py is the primary controller for the Users App.
+
+# The controller interacts with the website, receiving data from the forms on the website
+# which is sent to the model file,users_crud_sqlite_model.py, which interacts with the 
+# database, receiving data from the model to send back to the website, to then 
 # view on the website.
 
 # import app variable from flask_app package
@@ -24,7 +26,7 @@ def users_crud():
     users = Users.get_all()
     # check
     print("Now on View Page for All Users")
-    return render_template('/projects/users_crud/show_users.html', users = users)
+    return render_template('/projects/users_crud/index.html', users = users)
 
 # Display form to create new users on the Create page
 @app.route('/projects/users-crud/new')

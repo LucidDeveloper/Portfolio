@@ -12,21 +12,10 @@
     />
 {% endblock %}
 
-{% block content %}
-    <div class="top_nav">
-        <div class="dropdown">
-            <div class="dropbtn">
-                <a class= "text-decoration-none" href='/projects/leader_board'><h1>LeaderBoard</h1></a>
-            </div>
-            <div class="dropdown-content">
-                <a href="/resume">Resume</a>
-                <a href="/projects">Projects</a>
-                <a href="/home">Home</a>
-            </div>
-        </div>
-    </div>
+{% block top_nav %}LeaderBoard{% endblock %}
 
-    <div class="container mx-auto bg-dark border border-4 border-secondary rounded p-2" style="width: fit-content;">
+{% block content %}
+    <div class="container mx-auto bg-dark border border-4 border-secondary rounded p-2" style="">
         <div class="row-md bg-dark border rounded border-dark text-center">
             <h1 class="">You are Quite the Intellect</h1>
         </div>
@@ -62,3 +51,5 @@
     crossorigin="anonymous">
     </script>
 {% endblock %}
+
+{% block bottom_nav %}float-none fixed-bottom{% endblock %}

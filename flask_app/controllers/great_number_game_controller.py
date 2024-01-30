@@ -1,7 +1,11 @@
 # Controller file great_number_game_controller.py is the primary controller for the Great Number Game.
+
 # The controller interacts with the website, receiving data from the client and saving it in session.
-# As the client enters new information, the controller updates the session data and sends it to the website,
-# which then displays the updated information, with the clients current guess, number of attempts, and proximity
+
+# As the user enters new information into the website, the controller requests the information entered into
+# the form and updates the session data, with the new information, and then the flask app reroutes and renders
+# the html page with the updated information which sends it back to the website,
+# which then displays the updated information, with the users current guess, number of attempts, and proximity
 # to the random number.
 
 from flask_app import app
@@ -16,7 +20,7 @@ def great_number_game():
         session['guess'] = 0
     if 'attempts' not in session:
         session['attempts'] = 0
-    return render_template('/projects/great_number_game/great_number_game.html', random_int = session['random_int'], guess = session['guess'], attempts = session['attempts'] )
+    return render_template('/projects/great_number_game/index.html', random_int = session['random_int'], guess = session['guess'], attempts = session['attempts'] )
 
 @app.route('/process/guess', methods = ['post'])
 def process_guess():

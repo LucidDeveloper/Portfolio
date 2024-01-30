@@ -9,8 +9,10 @@
     crossorigin="anonymous">
 {% endblock %}
 
+{% block top_nav %}Edit User{% endblock %}
+
 {% block content %}
-    <div class="container mx-auto my-2" style="width: fit-content;">
+    <div class="container mx-auto my-2" style="">
         <div class="row border border-secondary border-bottom-0 rounded-top bg-secondary text-white rounded-top">
             <div class="col-md">
                 <h1 class="text-center">Edit User {{ user.id }}</h1>
@@ -36,15 +38,18 @@
                 <div class="col-md">
                     <button class=" text-align-center btn btn-secondary my-2" type="submit">Update</button>
                 </div>
-                </form>
-                <!-- All Home links should redirect to the Read (All) page -->
-                <div class="col-md">
-                    <h5 class="text-center text-secondary">
-                        <a class="text-light btn btn-secondary" href="/projects/users-crud">Home</a> | 
-                        <a class="text-light btn btn-secondary" href="/projects/users-crud/show/{{ user.id }}">Show</a> | 
-                        <a class="text-light btn btn-secondary" href="/projects/users-crud/delete/{{ user.id }}">Delete</a>
-                    </h5>
-                </div>
+            </form>
+            <!-- All Home links should redirect to the Read (All) page -->
+            <div class="col-md">
+                <h5 class="text-center text-secondary">
+                    <a class="text-light btn btn-secondary" href="/projects/users-crud">Home</a> | 
+                    <a class="text-light btn btn-secondary" href="/projects/users-crud/show/{{ user.id }}">Show</a> | 
+                    <a class="text-light btn btn-secondary" href="/projects/users-crud/delete/{{ user.id }}">Delete</a>
+                </h5>
+            </div>
+        </div>
+
+        <div class="box">
         </div>
     </div>
 
@@ -53,3 +58,5 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 {% endblock %}
+
+{% block bottom_nav %}float-none relative-bottom{% endblock %}

@@ -12,21 +12,10 @@
     />
 {% endblock %}
 
-{% block content %}
-    <div class="top_nav">
-        <div class="dropdown">
-            <div class="dropbtn">
-                <a class= "text-decoration-none" href='/projects/great-number-game'><h1>GreatNumberGame</h1></a>
-            </div>
-            <div class="dropdown-content">
-                <a href="/resume">Resume</a>
-                <a href="/projects">Projects</a>
-                <a href="/home">Home</a>
-            </div>
-        </div>
-    </div>
+{% block top_nav %}Great Number Game{% endblock %}
 
-    <div class="container p-2 mx-auto" style="width: fit-content">
+{% block content %}
+    <div class="container p-2 mx-auto" style="">
         <div class="row text-center bg-dark border border-4 border-bottom-0 border-secondary rounded-top">
             <h1 class="">Test Your Intellect</h1>
             <h4 class="">I am thinking of a number between 1 and 100</h4>
@@ -203,3 +192,5 @@
     crossorigin="anonymous">
     </script>
 {% endblock %}
+
+{% block bottom_nav %}float-none fixed-bottom{% endblock %}

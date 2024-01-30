@@ -1,6 +1,6 @@
 {% extends 'layouts/base.html' %}
 
-{% block title %}Show User{% endblock %}
+{% block title %}User{{user.id}}{% endblock %}
 
 {% block head %}
 <!-- Bootstrap CSS -->
@@ -9,14 +9,10 @@ rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCE
 crossorigin="anonymous">
 {% endblock %}
 
+{% block top_nav %}User{% endblock %}
+
 {% block content %}
-    <!-- Read (One) page will display the User's information -->
-    <div class="container mx-auto my-2" style="width: fit-content;">
-        <div class="row border border-secondary border-bottom-0 rounded-top bg-secondary text-white rounded-top">
-            <div class="col-md">
-                <h1 class="text-center"> Show User {{ user.id }}</h1>
-            </div>
-        </div>
+    <div class="container mx-auto my-2" style="">
         <div class="row border border-secondary bg-secondary text-white">
             <div class="row">
                 <h5 class="text-center">Full Name: {{ user.first_name }} {{ user.last_name }}</h5>
@@ -43,6 +39,9 @@ crossorigin="anonymous">
                 </h5>
             </div>
         </div>
+
+        <div class="box">
+        </div>
     </div>
 
     <!-- Bootstrap JavaScript Bundle with Popper -->
@@ -51,3 +50,5 @@ crossorigin="anonymous">
     crossorigin="anonymous">
     </script>
 {% endblock %}
+
+{% block bottom_nav %}float-none relative-bottom{% endblock %}

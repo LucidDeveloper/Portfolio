@@ -7,22 +7,14 @@
   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/index_style.css') }}">
 {% endblock %}
 
-{% block content %}
-    <div class="top_nav">
-      <div class="dropdown">
-        <div class="dropbtn"><a href='/'><h1>LucidDeveloper</h1></a></div>
-        <div class="dropdown-content">
-          <a href="/resume">Resume</a>
-          <a href="/projects">Projects</a>
-        </div>
-      </div>
-    </div>
+{% block top_nav %}LucidDeveloper{% endblock %}
 
+{% block content %}
     <div class="main">
       <div class="box">
       </div>
 
-      <div class="img">
+      <div class="index_img">
       <img
         src="{{ url_for('static', filename = 'images/index_picture.jpg') }}" alt="Index Picture" />
       </div>

@@ -1,4 +1,4 @@
-# Configuration file sqlite_connection_configuration.py works together with the model file users_sqlite_model.py 
+# Configuration file sqlite_connection_configuration.py works together with the model file users_crud_sqlite_model.py 
 # to interact with the database.
 
 # import sqlite module from python standard library

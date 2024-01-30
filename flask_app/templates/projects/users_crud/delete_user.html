@@ -9,9 +9,11 @@
     crossorigin="anonymous">
 {% endblock %}
 
+{% block top_nav %}Delete Users{% endblock %}
+
 {% block content %}
     <!-- Delete link will delete the User from the database, and redirect to the Read (All) page -->
-    <div class="container mx-auto my-2" style="width: fit-content;">
+    <div class="container mx-auto my-2" style="">
         <div class="row border border-secondary border-bottom-0 rounded-top bg-secondary text-white rounded-top">
             <div class="col-md">
                 <h1 class="text-center">Delete User {{ user.id }}</h1>
@@ -43,6 +45,9 @@
                 </h5>
             </div>
         </div>
+
+        <div class="box">
+        </div>
     </div>
 
     <!-- Bootstrap JavaScript Bundle with Popper -->
@@ -51,3 +56,5 @@
     crossorigin="anonymous">
     </script>
 {% endblock %}
+
+{% block bottom_nav %}float-none relative-bottom{% endblock %}
