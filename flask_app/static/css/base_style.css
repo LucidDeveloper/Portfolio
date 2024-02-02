@@ -129,12 +129,21 @@ h5 {
   width:100%;
 }
 
-/* links */
-#contrast:hover {
-  color: ghostwhite;
-  text-decoration:none;
+
+/*link color on hover*/
+.color{
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(to bottom, ghostwhite, dodgerblue );
+  background-clip: text;
+  color: transparent;
 }
 
+.color:hover {
+  text-align: center;
+  text-decoration: none;
+  color: ghostwhite;
+}
 /* Bottom Navigation */
 .bottom_nav {
   width: 100%;
@@ -160,6 +169,7 @@ h5 {
   background: linear-gradient(to bottom, ghostwhite, dodgerblue );
   background-clip: text;
   color: transparent;
+  transition: all 0.6s ease;
 }
 
 .bottom_nav a:hover {

@@ -9,13 +9,13 @@
 
 {% block content %}
     <div class="container mx-auto my-2" style="">
-        <div class="row border border-secondary border-bottom-0 rounded-top bg-secondary text-white rounded-top">
+        <div class="row">
             <div class="col-md">
-                <h1 class="text-center">Edit User {{ user.id }}</h1>
+                <h1 class="text-center">User {{ user.id }}</h1>
             </div>
         </div>
         
-        <div class="row border border-secondary border-top-0 rounded-bottom">
+        <div class="row">
             <!-- Edit link will render the Users Edit page -->
             <!-- Edit page will have a form pre-populated with the users information -->
             <form action="/users-crud/edit/process/{{ user.id }}" method="post">
@@ -32,17 +32,21 @@
                     <input class="form-control text-secondary" type="text" name="email" value="{{ user.email }}" placeholder="{{ user.email }}"/>
                 </div>
                 <div class="col-md">
-                    <button class=" text-align-center btn btn-secondary my-2" type="submit">Update</button>
+                    <button class="btn btn-outline-light my-2" type="submit">Update</button>
                 </div>
             </form>
-            <!-- All Home links should redirect to the Read (All) page -->
-            <div class="col-md">
-                <h5 class="text-center text-secondary">
-                    <a class="text-light btn btn-secondary" href="/projects/users-crud">Home</a> | 
-                    <a class="text-light btn btn-secondary" href="/projects/users-crud/show/{{ user.id }}">Show</a> | 
-                    <a class="text-light btn btn-secondary" href="/projects/users-crud/delete/{{ user.id }}">Delete</a>
-                </h5>
-            </div>
+        </div>
+
+        <div class="box">
+        </div>
+
+        <!-- All Home links should redirect to the Read (All) page -->
+        <div class="row">
+            <h5 class="text-center">
+                <a class="link-secondary text-decoration-none p-1 about_me mr-2" href="/projects/users-crud"><span class="color">Users</span></a>
+                <a class="link-secondary text-decoration-none p-1 about_me mr-2" href="/projects/users-crud/show/{{ user.id }}"><span class="color">Show</span></a>
+                <a class="link-secondary text-decoration-none p-1 about_me mr-2" href="/projects/users-crud/delete/{{ user.id }}"><span class="color">Delete</span></a>
+            </h5>
         </div>
 
         <div class="box">
@@ -50,4 +54,4 @@
     </div>
 {% endblock %}
 
-{% block bottom_nav %}float-none relative-bottom{% endblock %}
+{% block bottom_nav %}float-none fixed-bottom{% endblock %}

@@ -9,31 +9,42 @@
 
 {% block content %}
     <div class="container mx-auto my-2" style="">
-        <div class="row border border-secondary bg-secondary text-white">
+        <div class="box">
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <h2 class="text-center">User {{ user.id }}</h2>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="row">
-                <h5 class="text-center">Full Name: {{ user.first_name }} {{ user.last_name }}</h5>
+                <h5 class="text-center"><span class="text-white">Full Name: </span>{{ user.first_name }} {{ user.last_name }}</h5>
             </div>
             <div class="row">
-                <h5 class="text-center">Email: {{ user.email }}</h5>
+                <h5 class="text-center"><span class="text-white">Email: </span>{{ user.email }}</h5>
             </div>
             <div class="row">
-                <h5 class="text-center">Created On: {{ user.created_at }}</h5>
+                <h5 class="text-center"><span class="text-white">Created On: </span>{{ user.created_at }}</h5>
             </div>
             <!-- Update the updated_at field when editing the User's information -->
             <div class="row">
-                <h5 class="text-center"> Last Updated On: {{ user.updated_at }}</h5>
+                <h5 class="text-center"><span class="text-white">Last Updated On: </span>{{ user.updated_at }}</h5>
             </div>
         </div>
-        <!-- Read (One) page to have Edit and Delete links -->
-        <!-- All Home links should redirect to the Read (All) page -->
-        <div class="row border border-secondary border-top-0 rounded-bottom bg-secondary text-white">
-            <div class="col">
-                <h5 class="text-center text-light">
-                    <a class="text-secondary btn btn-light" href="/projects/users-crud">Home</a> | 
-                    <a class="text-secondary btn btn-light" href="/projects/users-crud/edit/{{ user.id }}">Edit</a> | 
-                    <a class = "text-secondary btn btn-light" href="/projects/users-crud/delete/{{ user.id }}">Delete</a>
-                </h5>
-            </div>
+
+        <div class="box">
+        </div>
+
+        <!-- Show User page to have Edit and Delete links -->
+        <!-- All Home links should redirect to the Users page -->
+        <div class="row">
+            <h5>
+                <a class="link-secondary text-decoration-none p-1 about_me mr-2" href="/projects/users-crud"><span class="color">Users</span></a> 
+                <a class="link-secondary text-decoration-none p-1 about_me mr-2" href="/projects/users-crud/edit/{{ user.id }}"><span class="color">Edit</span></a>
+                <a class="link-secondary text-decoration-none p-1 about_me mr-2" href="/projects/users-crud/delete/{{ user.id }}"><span class="color">Delete</span></a>
+            </h5>
         </div>
 
         <div class="box">
@@ -41,4 +52,4 @@
     </div>
 {% endblock %}
 
-{% block bottom_nav %}float-none relative-bottom{% endblock %}
+{% block bottom_nav %}float-none fixed-bottom{% endblock %}

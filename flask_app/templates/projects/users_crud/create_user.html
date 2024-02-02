@@ -5,20 +5,14 @@
 {% block head %}
 {% endblock %}
 
-{% block top_nav %}Create Users{% endblock %}
+{% block top_nav %}Create User{% endblock %}
 
 {% block content %}
     <div class="container mx-auto my-2" style="width:">
-        <div class="row border border-secondary border-bottom-0 rounded-top bg-secondary text-white rounded-top">
-            <div class="col-md">
-                <h1 class="text-center">Create User</h1>
-            </div>
-        </div>
-
-        <div class="row border border-secondary border-top-0 rounded-bottom">
+        <div class="row">
             <!-- Display form to create new users on the Create page -->
             <!-- When the form is submitted, a new user should be inserted into the database -->
-            <!-- After successful creation of a new User, redirect to Read (One) page -->
+            <!-- After successful creation of a new User, redirect to Show User page -->
             <form action="/users-crud/process" method="post">
                 <div class="col-md">
                     <label class="text-secondary" for="first_name"><h3>First Name:</h3></label>
@@ -33,13 +27,17 @@
                     <input class="form-control" type="text" name="email"/>
                 </div>
                 <div class="col-md">
-                    <button class=" text-align-center text-light btn btn-secondary my-2" type="submit">Add User</button>
+                    <button class="btn btn-outline-light my-2" type="submit">Add User</button>
                 </div>
-                </form>
-                <!-- All Home links should redirect to the Read (All) page -->
-                <div class="col-md">
-                    <h5 class="text-center">
-                        <a class="text-light btn btn-secondary" href="/projects/users-crud">Home</a>
+            </form>
+                <!-- Cancel and redirect to the Users page -->
+                <div>
+                    <h5>
+                        <a class="text-decoration-none p-1 mb-2 mr-2" href="/projects/users-crud">
+                            <span class="color">
+                                Cancel
+                            </span>
+                        </a>
                     </h5>
                 </div>
         </div>
@@ -49,4 +47,4 @@
     </div>
 {% endblock %}
 
-{% block bottom_nav %}float-none relative-bottom{% endblock %}
+{% block bottom_nav %}float-none fixed-bottom{% endblock %}

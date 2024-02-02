@@ -53,16 +53,18 @@ def users_crud_process():
 @app.route('/projects/users-crud/process/get_last_id')
 def users_crud_process_get_last_id():
     user_id = Users.get_last_id()
-    session['user_id'] = user_id
-    print(f"User with id {user_id} created. (Controller.Users.users_process_get_last_id)")
+    session['user_id'] = user_id[0]
+    print(f"User with id {user_id[0]} created. (Controller.Users.users_process_get_last_id)")
     return redirect('/projects/users-crud/show')
 
 # Read (One) page will display the User's information After Successful Creation
 @app.route('/projects/users-crud/show')
 def users_crud_show():
     data = {}
-    data['user_id'] = session['user_id']
-    session.clear()
+    # make sure to pass value at index and not a tuple. 
+    # Confirm values in session and data are the same
+    data['user_id'] = session['user_id'][0]
+    print(f"User with data id {data['user_id']} and session id {session['user_id'][0]} passed. (Controller.Users.users_crud_show)")
     user = Users.get_one(data)
     # check
     print(f"Now Showing View Page for User with id {data['user_id']}")

@@ -8,36 +8,35 @@
 {% block top_nav %}All Users{% endblock %}
 
 {% block content %}
-    <div class="container mx-auto my-2" style="">
+    <div class="container mx-auto my-2">
+        <div class="box">
+        </div>
+        
         <div>
-            <table class="text-secondary table table-striped">
+            <table class="text-white table table-striped">
                 <thead>
                     <tr>
-                        <th><h3 class="text-secondary">ID</h3></th>
-                        <th><h3 class="text-secondary">Full Name</h3></th>
-                        <th><h3 class="text-secondary">Email</h3></th>
-                        <th><h3 class="text-secondary">Created At</h3></th>
-                        <!-- On the Read (All) page add an Actions column -->
-                        <!-- Show link will render the Users Read (One) page -->
-                        <th><h3 class="text-secondary">Actions</h3></th>
+                        <th><h3 class="text-light">ID</h3></th>
+                        <th><h3 class="text-light">Name</h3></th>
+                        <th><h3 class="text-light">Email</h3></th>
+                        <th><h3 class="text-light">Created At</h3></th>
+                        <th><h3 class="text-whitet">Actions</h3></th>
                     </tr>
                 </thead>
-                <!-- Display all users from the database on the Read (All) page -->
-                <!-- Redirect to Read (All) page after creating a new user, and the user just created should appear in the table -->
+                <!-- Display all users from the database on the Users page -->
+                <!-- Redirect to Users page after creating a new user, and the user just created should appear in the table -->
                 <tbody>
                     {% for user in users  %}
                         <tr>
-                            <td><h5 class="text-secondary">{{ user.id }}</h5></td>
-                            <td><h5 class="text-secondary">{{ user.first_name }} {{ user.last_name }}</h5></td>
-                            <td><h5 class="text-secondary">{{ user.email }}</h5></td>
-                            <td><h5 class="text-secondary">{{ user.created_at }}</h5></td>
-                            <!-- On the Read (All) page add an Actions column -->
-                            <!-- Show link will render the Users Read (One) page -->
+                            <td><h5 class="text-white">{{ user.id }}</h5></td>
+                            <td><h5 class="text-white">{{ user.first_name }} {{ user.last_name }}</h5></td>
+                            <td><h5 class="text-white">{{ user.email }}</h5></td>
+                            <td><h5 class="text-white">{{ user.created_at }}</h5></td>
                             <td>
-                                <h5 class="text-secondary">
-                                    <a class = "text-light btn btn-secondary" href="/projects/users-crud/show/{{ user.id }}">Show</a> | 
-                                    <a class = "text-light btn btn-secondary" href="/projects/users-crud/edit/{{ user.id }}">Edit</a> | 
-                                    <a class = "text-light btn btn-secondary" href="/projects/users-crud/delete/{{ user.id }}">Delete</a>
+                                <h5>
+                                    <a class = "link-secondary p-1 btn btn-white border-rounded mb-2 mr-2" href="/projects/users-crud/show/{{ user.id }}"><span class="color">Show</span></a>
+                                    <a class = "link-secondary p-1 btn btn-white border-rounded mb-2 mr-2" href="/projects/users-crud/edit/{{ user.id }}"><span class="color">Edit</span></a>
+                                    <a class = "link-secondary p-1 btn btn-white border-rounded mb-2" href="/projects/users-crud/delete/{{ user.id }}"><span class="color">Delete</span></a>
                                 </h5>
                             </td>
                         </tr>
@@ -45,8 +44,18 @@
                 </tbody>
             </table>
         </div> 
+
+        <div class="box">
+        </div>
+
         <div>
-            <a class="text-light btn btn-secondary" href="/projects/users-crud/new">Add A New User</a>
+            <h5 class="text-end">
+                <a class="link-light rounded p-1 text-decoration-none" href="/projects/users-crud/new">
+                    <span class="color">
+                        Add User
+                    </span>
+                </a>
+            </h5>
         </div>
 
         <div class="box">

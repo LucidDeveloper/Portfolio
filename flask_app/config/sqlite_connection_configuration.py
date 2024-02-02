@@ -34,11 +34,10 @@ class SQLiteConnection:
                 print("fetch all result from sql connection configuration:", fetch_all_result)
                 return fetch_all_result
             elif query.lower().find("max(rowid)") >= 0:
-                # SELECT max(rowid) queries will return data
-                # fetch one method will return the data from the database as a tuple
+                # SELECT max(rowid) queries
                 fetch_one_result = cursor.fetchone()
-                print("fetch one result from sql connection configuration:", fetch_one_result)
-                return fetch_one_result[0] # Returns the first value of the tuple at index 0
+                print("fetch all for fetch one result from sql connection configuration:", fetch_one_result)
+                return fetch_one_result # Returns the first value at index 0
             else:
                 # UPDATE and DELETE queries will return nothing
                 self.connection.commit()
@@ -75,5 +74,5 @@ def connectToSQLite(db):
         return SQLiteConnection(db)
     else:
         # table confirmation
-        print(f"Table {table} already exists.")
+        print(f"Table {table} exists.")
         return SQLiteConnection(db)

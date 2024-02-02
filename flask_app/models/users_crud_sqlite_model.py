@@ -42,8 +42,20 @@ class Users:
     @classmethod
     def get_one(cls,data):
         query = 'SELECT * FROM users WHERE ROWID = :user_id;'
+        print(f"first run: query: {query} (Model.Users.get_one)")
+        print(f"first run:  data: {data} (Model.Users.get_one)")
         results = connectToSQLite(db).query_db(query, data)
+        print(f"results:{results}")
+        
         users = []
+        
+        if results == False:
+            # run Query again
+            results = connectToSQLite(db).query_db(query, data)
+            print(f"second run: query: {query} (Model.Users.get_one)")
+            print(f"second run: data: {data} (Model.Users.get_one)")
+            print(f"2nd results:{results}")
+        
         for user in results:
             # Create List of Objects
             users.append(cls(user)) # cls method Creates Objects (cls() is the constructor method)
