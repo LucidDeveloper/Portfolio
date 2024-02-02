@@ -117,7 +117,8 @@ h4,
 h5 {
   text-align: center;
   text-decoration: none;
-  margin: 0px;
+  margin: 0;
+  padding:0;
   background: linear-gradient(to bottom, ghostwhite, dodgerblue );
   background-clip: text;
   color: transparent;
@@ -126,6 +127,12 @@ h5 {
 .box{
   height:25px;
   width:100%;
+}
+
+/* links */
+#contrast:hover {
+  color: ghostwhite;
+  text-decoration:none;
 }
 
 /* Bottom Navigation */
