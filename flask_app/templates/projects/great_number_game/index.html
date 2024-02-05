@@ -2,7 +2,7 @@
 
 {% block title %}Great Number Game{% endblock %}
 
-{%block head %}
+{%block css %}
 {% endblock %}
 
 {% block top_nav %}Great Number Game{% endblock %}
@@ -88,17 +88,9 @@
     {% if guess == random_int: %}
         <div class="row bg-success border border-4 border-top-0 border-bottom-0 border-secondary">
             <div class="row-md text-center">
-                <h2 class="">Great Guess!</h2> 
+                <h2 class="">Great!</h2> 
                 <h2> My Number Was</h2> 
                 <h2 class="text-white"> {{ random_int }}!</h2>
-            </div>
-        </div>
-
-        <div class="row bg-success border border-4 border-top-0 border-bottom-0 border-secondary">
-            <div class="col-md text-center">
-                <h2 class="">You Guessed Within</h2>
-                    <h1 class="text-white"> {{ attempts }} </h1>
-                    <h2> Attempts</h2>
             </div>
         </div>
 
@@ -180,3 +172,5 @@
 {% endblock %}
 
 {% block bottom_nav %}float-none fixed-bottom{% endblock %}
+
+{% block script %}{% endblock %}

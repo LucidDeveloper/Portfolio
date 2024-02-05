@@ -2,8 +2,8 @@
 
 {% block title %}Resume{% endblock %}
 
-{% block head %}
-  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/resume_style.css') }}">
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/resume_style.css') }}">
 {% endblock %}
 
 {% block top_nav %}Resume{% endblock %}
@@ -106,3 +106,7 @@
       </div>
     </div>
 {% endblock %}
+
+{% block bottom_nav %}{% endblock %}
+
+{% block script %}{% endblock %}

@@ -2,8 +2,12 @@
 
 {% block title %}Projects{% endblock %}
 
-{% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename = 'css/projects_style.css') }}">
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/projects_style.css') }}">
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/base_script.js') }}"></script>
 {% endblock %}
 
 {% block top_nav %}Projects{% endblock %}
@@ -22,12 +26,14 @@
         </div>
 
       <div class="projects">
-        <!-- Video element -->
-        <video 
-          src="{{ url_for('static', filename = 'videos/users-crud.mp4') }}"
-          type="video/mp4" muted class="vid" loop style="display:flex; justify-content: center; border: none ; height:100px; width: 200px;"> 
-        </video>
         <h3>Users CRUD</h3>
+
+        <!-- Video element -->
+          <video id = "users_crud_video"
+            src="{{ url_for('static', filename = 'videos/users_crud.mp4') }}"
+            type="video/mp4" class = "video" mute loop controls> 
+          </video>
+
         <h4>Users CRUD is a a crud web app which allows user to create, read, update, and delete accounts.</h4>
         <br>
         <h4>Tools: Html, Css, Bootstrap, Python, Flask, Jinja, and SQLite.</h4>
@@ -56,12 +62,14 @@
       </div>
 
       <div class="projects">
-        <!-- Video element -->
-        <video 
-          src="{{ url_for('static', filename = 'videos/great-number-game.mp4') }}"
-          type="video/mp4" muted class="vid" loop style="display:flex; justify-content: center; border: none ; height:100px; width: 200px;"> 
-        </video>
         <h3>Great Number Game</h3>
+
+        <!-- Video element -->
+          <video id = "great_number_game_video"
+            src="{{ url_for('static', filename = 'videos/great_number_game.mp4') }}"
+            type="video/mp4" class="video" mute loop controls> 
+          </video>
+
         <h4>Great Number Game is a web app which picks a random number and allows the user to guess that number.</h4>
         <br>
         <h4>Tools: Html, Css, Bootstrap, Python, Jinja, and Flask.</h4>
@@ -88,12 +96,14 @@
       </div>
 
       <div class="projects">
-        <!-- Video element -->
-        <video 
-          src="{{ url_for('static', filename = 'videos/lucid-developer.mp4') }}"
-          type="video/mp4" muted class="vid" loop style="display:flex; justify-content: center; border: none ; height:100px; width: 200px;"> 
-        </video>
         <h3>LucidDeveloper</h3>
+
+        <!-- Video element -->
+          <video id = "portfolio_video"
+            src="{{ url_for('static', filename = 'videos/portfolio.mp4') }}"
+            type="video/mp4" class="video" mute loop controls> 
+          </video>
+
         <h4>LucidDeveloper is my personal website.</h4>
         <h4>Deployed on Digital Ocean using OpenSSH.</h4>
         <br>
@@ -124,3 +134,5 @@
 
     </div>
 {% endblock %}
+
+{% block bottom_nav %}{% endblock %}
