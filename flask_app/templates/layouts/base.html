@@ -17,7 +17,7 @@
         {% endblock %}
     </head>
     <body>
-        <div class="top_nav m-0 p-0">
+        <div class="center top_nav">
             <div class="dropdown">
             <div class="dropbtn"><h1>{% block top_nav %}{% endblock %}</h1></div>
             <div class="dropdown-content">
@@ -31,7 +31,7 @@
         {% block content %} 
         {% endblock %}
 
-        <div class="bottom_nav {% block bottom_nav %}{% endblock%} m-0 p-0" id="bottom_nav">    
+        <div class="bottom_nav {% block bottom_nav %}{% endblock%}" id="bottom_nav">    
             <h5><a href="https://www.linkedin.com/in/gianni-m-javier" target="_blank">LinkedIn</a></h5>
             <h5><a href="https://www.github.com/LucidDeveloper" target="_blank">GitHub</a></h5>
             <h5><a href="mailto:gianni.m.javier@luciddeveloper.com">Email</a></h5> 
