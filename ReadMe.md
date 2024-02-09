@@ -18,7 +18,7 @@ Gianni M. Javier
 
 **Hosted on DigitalOcean Droplet (Virtual Server).**
 
-**Served on the Web with Nginx.**
+**Served on the Web with Nginx (Web Server).**
 
 ## Technologies:
 
