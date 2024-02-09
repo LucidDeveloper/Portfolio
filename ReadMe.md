@@ -16,9 +16,9 @@ Gianni M. Javier
 
 **Styled using Css and Bootstrap.**
 
-**Hosted on DigitalOcean.**
+**Hosted on DigitalOcean Droplet (Virtual Server).**
 
-**Nginx Web Server**
+**Served on the Web with Nginx.**
 
 ## Technologies:
 
