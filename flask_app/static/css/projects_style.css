@@ -1,7 +1,8 @@
 /* Projects */
 .projects {
-    max-width: 600px;
+    width: 70%;
     display: block;
+    float: center;
     position: relative;
     margin: 15px auto 15px auto;
     padding: 15px;
@@ -24,6 +25,7 @@
 /* videos */
 
 .video {
+    width: 75%;
     padding: 15px 15px 15px 15px;
     margin: 15px auto 15px auto;
     display:block;
@@ -31,7 +33,6 @@
     align-content: center;
     border: none; 
     border-radius: 30px;
-    max-width: 525px;
 }
 
 .video:hover {

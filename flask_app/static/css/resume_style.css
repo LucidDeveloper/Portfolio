@@ -1,7 +1,8 @@
 /* Resume */
 .resume{
-    max-width: 600px;
+    width: 50%;
     display: block;
+    float: center;
     position: relative;
     margin: 15px auto 15px auto;
     padding: 15px;
