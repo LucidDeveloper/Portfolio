@@ -8,3 +8,17 @@
 {% endblock %}
 
 {% block top_nav %}Payments{% endblock %}
+
+<body>
+    <h1>We offer plans that help any business!</h1>
+    <!-- Paste your embed code script here. -->
+    <script
+    async
+    src="https://js.stripe.com/v3/pricing-table.js">
+    </script>
+    <stripe-pricing-table
+    pricing-table-id="{{PRICING_TABLE_ID}}"
+    publishable-key="pk_test_51RK14lKHOhfuLou7wsuQXddHpWvExbzB8pKpXV4VffmXhQMw9jDTcR8CO7pHsjl3zrThxdSs7eTNxVZsFnXrl9Uw009pP9rmmR"
+    >
+    </stripe-pricing-table>
+</body>
