@@ -8,26 +8,31 @@ Gianni M. Javier
 **Origin**
 12/04/2023
 
+**Last Updated**
+05/12/2025
+
 ## Summary:
 
 **Personal Website created to showcase my projects and resume.**
 
-**This web application was created using the Flask framework.**
+**Updated to incorporate freelance software engineering work, as a medium for contact with clients, as well as payments on products.**
 
-**Styled using Css and Bootstrap.**
+**The Back-end of this web application was created using the Flask framework.**
 
-**Hosted on DigitalOcean Droplet (Virtual Server).**
+**The Front-end was styled using HTML, CSS, and Bootstrap.**
 
-**Served on the Web with Nginx (Web Server).**
+**Deployed and Hosted on a DigitalOcean Droplet (Virtual Server).**
+
+**Served to the internet with the Nginx Web Server engine.**
 
 ## Technologies:
 
-**HTML, CSS, JavaScript, Python, Flask, Jinja, Nginx**
+**HTML, CSS, JavaScript, Bootstrap, Python, Flask, Jinja, SQLite, Nginx**
 
-## Link:
+## Link (URL):
 
-**luciddeveloper.com**
+**https://luciddeveloper.com**
 
 ## GitHub:
 
-**github.com/LucidDeveloper/Portfolio**
+**https://github.com/LucidDeveloper/Portfolio**
