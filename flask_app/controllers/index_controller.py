@@ -20,8 +20,9 @@ def projects():
 
 @app.route('/payments')
 def payments():
+    PRICING_TABLE_ID = os.environ.get("PRICING_TABLE_ID")
     PUBLISHABLE_KEY= os.environ.get("PUBLISHABLE_KEY")
-    return render_template('/payments.html', PUBLISHABLE_KEY=PUBLISHABLE_KEY)
+    return render_template('/payments.html',PRICING_TABLE_ID=PRICING_TABLE_ID, PUBLISHABLE_KEY=PUBLISHABLE_KEY)
 
 @app.route('/contact')
 def contact():
