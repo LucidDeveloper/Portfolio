@@ -1,25 +1,24 @@
 {% extends 'layouts/base.html' %}
 
+{% set PUBLISHABLE_KEY = "pk_test_51N2v4fK0x1J3q5X9Zk7Q6Y8g5z5z5z5z5z5z5z5z5z5z5z5z5z5z5" %}
+{% set PRICING_TABLE_ID = "price_1N2v4fK0x1J3q5X9Zk7Q6Y8g" %}
+
 {% block title %}Payments{% endblock %} 
 
 {% block css %}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/index_style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/ index_style.css') }}"> 
 {% endblock %}
 
 {% block top_nav %}Payments{% endblock %}
 
 {% block content %}
-    <body>
-        {% block script%}
-            <script
-            async
-            src="https://js.stripe.com/v3/pricing-table.js">
-            </script>
-            <stripe-pricing-table
-            pricing-table-id="{{PRICING_TABLE_ID}}"
-            publishable-key= "{{PUBLISHABLE_KEY}}"
-            >
-            </stripe-pricing-table>
-        {% endblock %}
-    </body>
+        <script
+        async
+        src="https://js.stripe.com/v3/pricing-table.js">
+        </script>
+        <stripe-pricing-table
+        pricing-table-id="{{PRICING_TABLE_ID}}"
+        publishable-key= "{{PUBLISHABLE_KEY}}"
+        >
+        </stripe-pricing-table>
 {% endblock %}
